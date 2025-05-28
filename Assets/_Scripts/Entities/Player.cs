@@ -15,7 +15,7 @@ namespace Assets._Scripts.Entities
         /// </summary>
         void Update()
         {
-            base.TakeDamage(10);
+            //base.TakeDamage(10);
         }
 
         /// <summary>
