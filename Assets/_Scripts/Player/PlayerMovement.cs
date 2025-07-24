@@ -513,8 +513,8 @@ namespace _Scripts.Player
 
         public void ApplyDiagonalForce(bool facingRight)
         {
-            var verticalPower = PlayerVariables.Instance.Stats.JumpPower * 0.7f;
-            var horizontalPower = PlayerVariables.Instance.Stats.MaxSpeed * 2f;
+            var verticalPower = PlayerVariables.Instance.Stats.JumpPower * 0.5f;
+            var horizontalPower = PlayerVariables.Instance.Stats.MaxSpeed * 3f;
 
             var diagonalForce = new Vector2(
                 facingRight ? horizontalPower : -horizontalPower,
@@ -522,6 +522,10 @@ namespace _Scripts.Player
             );
 
             _frameVelocity = diagonalForce;
+        }
+        public void ResetFrameInput()
+        {
+            _frameInput = new FrameInput();
         }
 
 #if UNITY_EDITOR
