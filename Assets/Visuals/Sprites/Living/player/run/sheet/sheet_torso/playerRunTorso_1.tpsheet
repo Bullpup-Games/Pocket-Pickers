@@ -1,0 +1,40 @@
+#
+# Sprite sheet data for Unity.
+#
+# To import these sprites into your Unity project, download "TexturePackerImporter":
+# https://www.codeandweb.com/texturepacker/unity
+#
+# $TexturePacker:SmartUpdate:1b9b2aed680edf6588f3b3b4400c083a:0e75925afef1b3f4118413b5fcd39d11:4844d6d6aa8a672904a8c5a0250d834e$
+#
+:format=40300
+:texture=playerRunTorso_1.png
+:size=2048x1024
+:pivotpoints=enabled
+:borders=disabled
+:alphahandling=ClearTransparentPixels
+
+playerRunTorso0001;0;582;411;442; 0.5;0.5; 0;0;0;0
+playerRunTorso0002;0;582;411;442; 0.5;0.5; 0;0;0;0
+playerRunTorso0003;0;582;411;442; 0.5;0.5; 0;0;0;0
+playerRunTorso0004;0;582;411;442; 0.5;0.5; 0;0;0;0
+playerRunTorso0005;411;582;411;442; 0.5;0.5; 0;0;0;0
+playerRunTorso0006;411;582;411;442; 0.5;0.5; 0;0;0;0
+playerRunTorso0007;822;582;411;442; 0.5;0.5; 0;0;0;0
+playerRunTorso0008;822;582;411;442; 0.5;0.5; 0;0;0;0
+playerRunTorso0009;1233;582;411;442; 0.5;0.5; 0;0;0;0
+playerRunTorso0010;1233;582;411;442; 0.5;0.5; 0;0;0;0
+playerRunTorso0011;0;582;411;442; 0.5;0.5; 0;0;0;0
+playerRunTorso0012;0;582;411;442; 0.5;0.5; 0;0;0;0
+playerRunTorso0013;0;140;411;442; 0.5;0.5; 0;0;0;0
+playerRunTorso0014;0;140;411;442; 0.5;0.5; 0;0;0;0
+playerRunTorso0015;0;140;411;442; 0.5;0.5; 0;0;0;0
+playerRunTorso0016;0;140;411;442; 0.5;0.5; 0;0;0;0
+playerRunTorso0017;411;140;411;442; 0.5;0.5; 0;0;0;0
+playerRunTorso0018;411;140;411;442; 0.5;0.5; 0;0;0;0
+playerRunTorso0019;411;140;411;442; 0.5;0.5; 0;0;0;0
+playerRunTorso0020;411;140;411;442; 0.5;0.5; 0;0;0;0
+playerRunTorso0021;0;582;411;442; 0.5;0.5; 0;0;0;0
+playerRunTorso0022;0;582;411;442; 0.5;0.5; 0;0;0;0
+playerRunTorso0023;0;582;411;442; 0.5;0.5; 0;0;0;0
+playerRunTorso0024;0;582;411;442; 0.5;0.5; 0;0;0;0
+playerRunTorso0025;0;582;411;442; 0.5;0.5; 0;0;0;0

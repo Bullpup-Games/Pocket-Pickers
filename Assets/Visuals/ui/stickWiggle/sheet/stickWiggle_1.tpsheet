@@ -1,0 +1,28 @@
+#
+# Sprite sheet data for Unity.
+#
+# To import these sprites into your Unity project, download "TexturePackerImporter":
+# https://www.codeandweb.com/texturepacker/unity
+#
+# $TexturePacker:SmartUpdate:81f12498d95e7590887e8b41a8e65367:b642e366f22e22bce693b9d1dc56975c:1231903662fb5eccc0c98d119f30cb64$
+#
+:format=40300
+:texture=stickWiggle_1.png
+:size=2048x2048
+:pivotpoints=enabled
+:borders=disabled
+:alphahandling=ClearTransparentPixels
+
+stickWiggle0001;0;1637;539;411; 0.5;0.5; 0;0;0;0
+stickWiggle0002;0;1637;539;411; 0.5;0.5; 0;0;0;0
+stickWiggle0003;539;1637;539;411; 0.5;0.5; 0;0;0;0
+stickWiggle0004;1078;1637;539;411; 0.5;0.5; 0;0;0;0
+stickWiggle0005;0;1226;539;411; 0.5;0.5; 0;0;0;0
+stickWiggle0006;539;1226;539;411; 0.5;0.5; 0;0;0;0
+stickWiggle0007;1078;1226;539;411; 0.5;0.5; 0;0;0;0
+stickWiggle0008;0;815;539;411; 0.5;0.5; 0;0;0;0
+stickWiggle0009;0;815;539;411; 0.5;0.5; 0;0;0;0
+stickWiggle0010;539;815;539;411; 0.5;0.5; 0;0;0;0
+stickWiggle0011;539;815;539;411; 0.5;0.5; 0;0;0;0
+stickWiggle0012;1078;815;539;411; 0.5;0.5; 0;0;0;0
+stickWiggle0013;0;404;539;411; 0.5;0.5; 0;0;0;0

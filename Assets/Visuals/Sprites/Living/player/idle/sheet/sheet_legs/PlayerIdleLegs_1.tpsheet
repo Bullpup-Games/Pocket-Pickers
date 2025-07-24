@@ -1,0 +1,16 @@
+#
+# Sprite sheet data for Unity.
+#
+# To import these sprites into your Unity project, download "TexturePackerImporter":
+# https://www.codeandweb.com/texturepacker/unity
+#
+# $TexturePacker:SmartUpdate:d145609641895713b8141c2663acac7e:f2353251c918a38d150c4ce0a1cb3b1f:6dfd5a59881785355adb953e5bb69551$
+#
+:format=40300
+:texture=playerIdleLegs_1.png
+:size=256x256
+:pivotpoints=enabled
+:borders=disabled
+:alphahandling=ClearTransparentPixels
+
+PlayerldleLegs;0;71;239;185; 0.5;0.5; 0;0;0;0

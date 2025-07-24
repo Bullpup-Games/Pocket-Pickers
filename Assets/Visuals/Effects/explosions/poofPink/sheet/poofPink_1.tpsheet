@@ -1,0 +1,32 @@
+#
+# Sprite sheet data for Unity.
+#
+# To import these sprites into your Unity project, download "TexturePackerImporter":
+# https://www.codeandweb.com/texturepacker/unity
+#
+# $TexturePacker:SmartUpdate:da4260786793d6fa23834dd8c5ecfec1:4a400a519e05df41e681e96b05a38e0b:c21f013c28b28d4d90641964f403e29d$
+#
+:format=40300
+:texture=poofPink_1.png
+:size=2048x2048
+:pivotpoints=enabled
+:borders=disabled
+:alphahandling=ClearTransparentPixels
+
+poofPink0001;0;1613;608;435; 0.5;0.5; 0;0;0;0
+poofPink0002;608;1613;608;435; 0.5;0.5; 0;0;0;0
+poofPink0003;1216;1613;608;435; 0.5;0.5; 0;0;0;0
+poofPink0004;0;1178;608;435; 0.5;0.5; 0;0;0;0
+poofPink0005;0;1178;608;435; 0.5;0.5; 0;0;0;0
+poofPink0006;608;1178;608;435; 0.5;0.5; 0;0;0;0
+poofPink0007;608;1178;608;435; 0.5;0.5; 0;0;0;0
+poofPink0008;608;1178;608;435; 0.5;0.5; 0;0;0;0
+poofPink0009;1216;1178;608;435; 0.5;0.5; 0;0;0;0
+poofPink0010;1216;1178;608;435; 0.5;0.5; 0;0;0;0
+poofPink0011;1216;1178;608;435; 0.5;0.5; 0;0;0;0
+poofPink0012;0;743;608;435; 0.5;0.5; 0;0;0;0
+poofPink0013;0;743;608;435; 0.5;0.5; 0;0;0;0
+poofPink0014;0;743;608;435; 0.5;0.5; 0;0;0;0
+poofPink0015;608;743;608;435; 0.5;0.5; 0;0;0;0
+poofPink0016;608;743;608;435; 0.5;0.5; 0;0;0;0
+poofPink0017;608;743;608;435; 0.5;0.5; 0;0;0;0

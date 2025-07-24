@@ -1,0 +1,31 @@
+#
+# Sprite sheet data for Unity.
+#
+# To import these sprites into your Unity project, download "TexturePackerImporter":
+# https://www.codeandweb.com/texturepacker/unity
+#
+# $TexturePacker:SmartUpdate:d5254208fb54d27dc6e67bb7d974a761:a2e0c5a4e11e22da3770a81c52c700d6:a223466790bed6e7bf3d5fac433fd52d$
+#
+:format=40300
+:texture=pressButtonLT_1.png
+:size=1024x512
+:pivotpoints=enabled
+:borders=disabled
+:alphahandling=ClearTransparentPixels
+
+pressButtonLT0001;0;145;183;367; 0.5;0.5; 0;0;0;0
+pressButtonLT0002;0;145;183;367; 0.5;0.5; 0;0;0;0
+pressButtonLT0003;183;145;183;367; 0.5;0.5; 0;0;0;0
+pressButtonLT0004;183;145;183;367; 0.5;0.5; 0;0;0;0
+pressButtonLT0005;366;145;183;367; 0.5;0.5; 0;0;0;0
+pressButtonLT0006;366;145;183;367; 0.5;0.5; 0;0;0;0
+pressButtonLT0007;549;145;183;367; 0.5;0.5; 0;0;0;0
+pressButtonLT0008;549;145;183;367; 0.5;0.5; 0;0;0;0
+pressButtonLT0009;0;145;183;367; 0.5;0.5; 0;0;0;0
+pressButtonLT0010;0;145;183;367; 0.5;0.5; 0;0;0;0
+pressButtonLT0011;183;145;183;367; 0.5;0.5; 0;0;0;0
+pressButtonLT0012;183;145;183;367; 0.5;0.5; 0;0;0;0
+pressButtonLT0013;366;145;183;367; 0.5;0.5; 0;0;0;0
+pressButtonLT0014;366;145;183;367; 0.5;0.5; 0;0;0;0
+pressButtonLT0015;549;145;183;367; 0.5;0.5; 0;0;0;0
+pressButtonLT0016;549;145;183;367; 0.5;0.5; 0;0;0;0

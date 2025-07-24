@@ -1,0 +1,35 @@
+#
+# Sprite sheet data for Unity.
+#
+# To import these sprites into your Unity project, download "TexturePackerImporter":
+# https://www.codeandweb.com/texturepacker/unity
+#
+# $TexturePacker:SmartUpdate:f0b2ef283675a4f46c9c593b4549c1e1:cfb4575029bf0e97557c0f0a3a0b766d:f7cebbf0f46dd8cc1d1381cc7b4d7017$
+#
+:format=40300
+:texture=sin_small_gold_1.png
+:size=256x256
+:pivotpoints=enabled
+:borders=disabled
+:alphahandling=ClearTransparentPixels
+
+sin_small_gold_idle0001;0;9;41;247; 0.5;0.5; 0;0;0;0
+sin_small_gold_idle0002;0;9;41;247; 0.5;0.5; 0;0;0;0
+sin_small_gold_idle0003;0;9;41;247; 0.5;0.5; 0;0;0;0
+sin_small_gold_idle0004;0;9;41;247; 0.5;0.5; 0;0;0;0
+sin_small_gold_idle0005;41;9;41;247; 0.5;0.5; 0;0;0;0
+sin_small_gold_idle0006;41;9;41;247; 0.5;0.5; 0;0;0;0
+sin_small_gold_idle0007;41;9;41;247; 0.5;0.5; 0;0;0;0
+sin_small_gold_idle0008;41;9;41;247; 0.5;0.5; 0;0;0;0
+sin_small_gold_idle0009;41;9;41;247; 0.5;0.5; 0;0;0;0
+sin_small_gold_idle0010;82;9;41;247; 0.5;0.5; 0;0;0;0
+sin_small_gold_idle0011;82;9;41;247; 0.5;0.5; 0;0;0;0
+sin_small_gold_idle0012;82;9;41;247; 0.5;0.5; 0;0;0;0
+sin_small_gold_idle0013;82;9;41;247; 0.5;0.5; 0;0;0;0
+sin_small_gold_idle0014;82;9;41;247; 0.5;0.5; 0;0;0;0
+sin_small_gold_idle0015;123;9;41;247; 0.5;0.5; 0;0;0;0
+sin_small_gold_idle0016;123;9;41;247; 0.5;0.5; 0;0;0;0
+sin_small_gold_idle0017;123;9;41;247; 0.5;0.5; 0;0;0;0
+sin_small_gold_idle0018;123;9;41;247; 0.5;0.5; 0;0;0;0
+sin_small_gold_idle0019;123;9;41;247; 0.5;0.5; 0;0;0;0
+sin_small_gold_idle0020;0;9;41;247; 0.5;0.5; 0;0;0;0

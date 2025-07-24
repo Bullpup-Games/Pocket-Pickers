@@ -1,0 +1,32 @@
+#
+# Sprite sheet data for Unity.
+#
+# To import these sprites into your Unity project, download "TexturePackerImporter":
+# https://www.codeandweb.com/texturepacker/unity
+#
+# $TexturePacker:SmartUpdate:584bab4e83f0f9dae77a7e355938dfba:81319d804a6d6024344655a6455ddb30:1c6634b024c8f6d5c27486a22e0b9abc$
+#
+:format=40300
+:texture=poofBlue_1.png
+:size=2048x2048
+:pivotpoints=enabled
+:borders=disabled
+:alphahandling=ClearTransparentPixels
+
+poofBlue0001;0;1613;608;435; 0.5;0.5; 0;0;0;0
+poofBlue0002;608;1613;608;435; 0.5;0.5; 0;0;0;0
+poofBlue0003;1216;1613;608;435; 0.5;0.5; 0;0;0;0
+poofBlue0004;0;1178;608;435; 0.5;0.5; 0;0;0;0
+poofBlue0005;0;1178;608;435; 0.5;0.5; 0;0;0;0
+poofBlue0006;608;1178;608;435; 0.5;0.5; 0;0;0;0
+poofBlue0007;608;1178;608;435; 0.5;0.5; 0;0;0;0
+poofBlue0008;608;1178;608;435; 0.5;0.5; 0;0;0;0
+poofBlue0009;1216;1178;608;435; 0.5;0.5; 0;0;0;0
+poofBlue0010;1216;1178;608;435; 0.5;0.5; 0;0;0;0
+poofBlue0011;1216;1178;608;435; 0.5;0.5; 0;0;0;0
+poofBlue0012;0;743;608;435; 0.5;0.5; 0;0;0;0
+poofBlue0013;0;743;608;435; 0.5;0.5; 0;0;0;0
+poofBlue0014;0;743;608;435; 0.5;0.5; 0;0;0;0
+poofBlue0015;608;743;608;435; 0.5;0.5; 0;0;0;0
+poofBlue0016;608;743;608;435; 0.5;0.5; 0;0;0;0
+poofBlue0017;608;743;608;435; 0.5;0.5; 0;0;0;0

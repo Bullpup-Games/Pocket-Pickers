@@ -1,0 +1,32 @@
+#
+# Sprite sheet data for Unity.
+#
+# To import these sprites into your Unity project, download "TexturePackerImporter":
+# https://www.codeandweb.com/texturepacker/unity
+#
+# $TexturePacker:SmartUpdate:f681f8a19f237d65e1441f8a1d2cf879:49bcecd743b9133ccff03b8dbd2c3d00:f2cd3f5d10bd3fb71ee0104dab30da72$
+#
+:format=40300
+:texture=patrollerChase_1.png
+:size=1024x512
+:pivotpoints=enabled
+:borders=disabled
+:alphahandling=ClearTransparentPixels
+
+patrollerChase0001;0;207;303;305; 0.5;0.5; 0;0;0;0
+patrollerChase0002;0;207;303;305; 0.5;0.5; 0;0;0;0
+patrollerChase0003;0;207;303;305; 0.5;0.5; 0;0;0;0
+patrollerChase0004;0;207;303;305; 0.5;0.5; 0;0;0;0
+patrollerChase0005;303;207;303;305; 0.5;0.5; 0;0;0;0
+patrollerChase0006;303;207;303;305; 0.5;0.5; 0;0;0;0
+patrollerChase0007;303;207;303;305; 0.5;0.5; 0;0;0;0
+patrollerChase0008;303;207;303;305; 0.5;0.5; 0;0;0;0
+patrollerChase0009;0;207;303;305; 0.5;0.5; 0;0;0;0
+patrollerChase0010;0;207;303;305; 0.5;0.5; 0;0;0;0
+patrollerChase0011;0;207;303;305; 0.5;0.5; 0;0;0;0
+patrollerChase0012;0;207;303;305; 0.5;0.5; 0;0;0;0
+patrollerChase0013;606;207;303;305; 0.5;0.5; 0;0;0;0
+patrollerChase0014;606;207;303;305; 0.5;0.5; 0;0;0;0
+patrollerChase0015;606;207;303;305; 0.5;0.5; 0;0;0;0
+patrollerChase0016;606;207;303;305; 0.5;0.5; 0;0;0;0
+patrollerChase0017;606;207;303;305; 0.5;0.5; 0;0;0;0

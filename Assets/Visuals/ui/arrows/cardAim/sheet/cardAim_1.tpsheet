@@ -1,0 +1,16 @@
+#
+# Sprite sheet data for Unity.
+#
+# To import these sprites into your Unity project, download "TexturePackerImporter":
+# https://www.codeandweb.com/texturepacker/unity
+#
+# $TexturePacker:SmartUpdate:b667863d9c0dc789da42d5e0440c50e5:708fb4b2846af0f7656f72b0358348e2:67c4f31b3b4f5863ea45935194408242$
+#
+:format=40300
+:texture=cardAim_1.png
+:size=128x64
+:pivotpoints=enabled
+:borders=disabled
+:alphahandling=ClearTransparentPixels
+
+cardArrow;1;19;98;44; 0.5;0.5; 0;0;0;0; 9;98;27;98;17;72;0;64;0;2;18;0;19;0;25;64;44;72;44; 7;3;7;8;6;4;5;6;7;4;3;4;7;2;3;8;1;2;8;0;1;8

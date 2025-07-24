@@ -1,0 +1,31 @@
+#
+# Sprite sheet data for Unity.
+#
+# To import these sprites into your Unity project, download "TexturePackerImporter":
+# https://www.codeandweb.com/texturepacker/unity
+#
+# $TexturePacker:SmartUpdate:54f422dbbc0e23f810bd4633821b3b4f:010b24d6d8a9522306ea41383adc8fbc:676cf6dae4615264d95634f19ce8d6a1$
+#
+:format=40300
+:texture=screacherAlert_1.png
+:size=512x256
+:pivotpoints=enabled
+:borders=disabled
+:alphahandling=ClearTransparentPixels
+
+screacherAlerting0001;0;55;162;201; 0.5;0.5; 0;0;0;0
+screacherAlerting0002;0;55;162;201; 0.5;0.5; 0;0;0;0
+screacherAlerting0003;0;55;162;201; 0.5;0.5; 0;0;0;0
+screacherAlerting0004;0;55;162;201; 0.5;0.5; 0;0;0;0
+screacherAlerting0005;0;55;162;201; 0.5;0.5; 0;0;0;0
+screacherAlerting0006;0;55;162;201; 0.5;0.5; 0;0;0;0
+screacherAlerting0007;0;55;162;201; 0.5;0.5; 0;0;0;0
+screacherAlerting0008;162;55;162;201; 0.5;0.5; 0;0;0;0
+screacherAlerting0009;162;55;162;201; 0.5;0.5; 0;0;0;0
+screacherAlerting0010;162;55;162;201; 0.5;0.5; 0;0;0;0
+screacherAlerting0011;162;55;162;201; 0.5;0.5; 0;0;0;0
+screacherAlerting0012;162;55;162;201; 0.5;0.5; 0;0;0;0
+screacherAlerting0013;162;55;162;201; 0.5;0.5; 0;0;0;0
+screacherAlerting0014;162;55;162;201; 0.5;0.5; 0;0;0;0
+screacherAlerting0015;162;55;162;201; 0.5;0.5; 0;0;0;0
+screacherAlerting0016;162;55;162;201; 0.5;0.5; 0;0;0;0

@@ -1,0 +1,40 @@
+#
+# Sprite sheet data for Unity.
+#
+# To import these sprites into your Unity project, download "TexturePackerImporter":
+# https://www.codeandweb.com/texturepacker/unity
+#
+# $TexturePacker:SmartUpdate:49ea6112a5e5a882f220faf06a6c24f0:41541ee3b3b084d0c765b7c577436cd7:17f3a5445167df3a43ea55c5f2ca2116$
+#
+:format=40300
+:texture=playerRunLegs_1.png
+:size=1024x512
+:pivotpoints=enabled
+:borders=disabled
+:alphahandling=ClearTransparentPixels
+
+PlayerRunLegs0001;0;313;289;199; 0.5;0.5; 0;0;0;0
+PlayerRunLegs0002;0;313;289;199; 0.5;0.5; 0;0;0;0
+PlayerRunLegs0003;0;313;289;199; 0.5;0.5; 0;0;0;0
+PlayerRunLegs0004;0;313;289;199; 0.5;0.5; 0;0;0;0
+PlayerRunLegs0005;289;313;289;199; 0.5;0.5; 0;0;0;0
+PlayerRunLegs0006;289;313;289;199; 0.5;0.5; 0;0;0;0
+PlayerRunLegs0007;289;313;289;199; 0.5;0.5; 0;0;0;0
+PlayerRunLegs0008;289;313;289;199; 0.5;0.5; 0;0;0;0
+PlayerRunLegs0009;578;313;289;199; 0.5;0.5; 0;0;0;0
+PlayerRunLegs0010;578;313;289;199; 0.5;0.5; 0;0;0;0
+PlayerRunLegs0011;578;313;289;199; 0.5;0.5; 0;0;0;0
+PlayerRunLegs0012;578;313;289;199; 0.5;0.5; 0;0;0;0
+PlayerRunLegs0013;0;114;289;199; 0.5;0.5; 0;0;0;0
+PlayerRunLegs0014;0;114;289;199; 0.5;0.5; 0;0;0;0
+PlayerRunLegs0015;0;114;289;199; 0.5;0.5; 0;0;0;0
+PlayerRunLegs0016;0;114;289;199; 0.5;0.5; 0;0;0;0
+PlayerRunLegs0017;289;114;289;199; 0.5;0.5; 0;0;0;0
+PlayerRunLegs0018;289;114;289;199; 0.5;0.5; 0;0;0;0
+PlayerRunLegs0019;289;114;289;199; 0.5;0.5; 0;0;0;0
+PlayerRunLegs0020;289;114;289;199; 0.5;0.5; 0;0;0;0
+PlayerRunLegs0021;578;114;289;199; 0.5;0.5; 0;0;0;0
+PlayerRunLegs0022;578;114;289;199; 0.5;0.5; 0;0;0;0
+PlayerRunLegs0023;578;114;289;199; 0.5;0.5; 0;0;0;0
+PlayerRunLegs0024;578;114;289;199; 0.5;0.5; 0;0;0;0
+PlayerRunLegs0025;578;114;289;199; 0.5;0.5; 0;0;0;0

@@ -6,8 +6,16 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 99c9720ab356a0642a771bea13969a05
+    path: Assets/Scenes/Capstone Release/MainMenu.unity
+    guid: 89522591304b9f9408cc1d9cd8335acb
+  - enabled: 1
+    path: Assets/Scenes/Capstone Release/Map.unity
+    guid: 1bf56232d49cf9843aa9f6d82500b6f6
+  - enabled: 1
+    path: Assets/Scenes/Capstone Release/EscapeScreen.unity
+    guid: b843f5f89a86b9b4f8123f402a6326f1
+  - enabled: 1
+    path: Assets/Scenes/Capstone Release/Credits.unity
+    guid: b5fc847dffbefb74cb9413323d6c7d6a
   m_configObjects:
-    com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
-  m_UseUCBPForAssetBundles: 0
+    com.unity.input.settings: {fileID: 11400000, guid: 63042ddf6387e46d6b9bce254a02ee98, type: 2}

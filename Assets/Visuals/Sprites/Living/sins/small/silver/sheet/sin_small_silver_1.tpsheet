@@ -1,0 +1,35 @@
+#
+# Sprite sheet data for Unity.
+#
+# To import these sprites into your Unity project, download "TexturePackerImporter":
+# https://www.codeandweb.com/texturepacker/unity
+#
+# $TexturePacker:SmartUpdate:eeeb92b6dadf4fccbf9935d4406e7ac9:190175594caf95745f4fdd1c6c9ac551:3bc81bb8e6fd2b04f06d2e140355c5d6$
+#
+:format=40300
+:texture=sin_small_silver_1.png
+:size=256x256
+:pivotpoints=enabled
+:borders=disabled
+:alphahandling=ClearTransparentPixels
+
+sin_small_silver_idle0001;0;9;41;247; 0.5;0.5; 0;0;0;0
+sin_small_silver_idle0002;0;9;41;247; 0.5;0.5; 0;0;0;0
+sin_small_silver_idle0003;0;9;41;247; 0.5;0.5; 0;0;0;0
+sin_small_silver_idle0004;0;9;41;247; 0.5;0.5; 0;0;0;0
+sin_small_silver_idle0005;41;9;41;247; 0.5;0.5; 0;0;0;0
+sin_small_silver_idle0006;41;9;41;247; 0.5;0.5; 0;0;0;0
+sin_small_silver_idle0007;41;9;41;247; 0.5;0.5; 0;0;0;0
+sin_small_silver_idle0008;41;9;41;247; 0.5;0.5; 0;0;0;0
+sin_small_silver_idle0009;41;9;41;247; 0.5;0.5; 0;0;0;0
+sin_small_silver_idle0010;82;9;41;247; 0.5;0.5; 0;0;0;0
+sin_small_silver_idle0011;82;9;41;247; 0.5;0.5; 0;0;0;0
+sin_small_silver_idle0012;82;9;41;247; 0.5;0.5; 0;0;0;0
+sin_small_silver_idle0013;82;9;41;247; 0.5;0.5; 0;0;0;0
+sin_small_silver_idle0014;82;9;41;247; 0.5;0.5; 0;0;0;0
+sin_small_silver_idle0015;123;9;41;247; 0.5;0.5; 0;0;0;0
+sin_small_silver_idle0016;123;9;41;247; 0.5;0.5; 0;0;0;0
+sin_small_silver_idle0017;123;9;41;247; 0.5;0.5; 0;0;0;0
+sin_small_silver_idle0018;123;9;41;247; 0.5;0.5; 0;0;0;0
+sin_small_silver_idle0019;123;9;41;247; 0.5;0.5; 0;0;0;0
+sin_small_silver_idle0020;0;9;41;247; 0.5;0.5; 0;0;0;0

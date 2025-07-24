@@ -1,0 +1,16 @@
+#
+# Sprite sheet data for Unity.
+#
+# To import these sprites into your Unity project, download "TexturePackerImporter":
+# https://www.codeandweb.com/texturepacker/unity
+#
+# $TexturePacker:SmartUpdate:5141842767b0b0050a4ea2ddc91b9864:f661c6bc735f807148559ef64c871c96:655607688f3e38a515ba33e574ba2dd9$
+#
+:format=40300
+:texture=patrollerIdle_1.png
+:size=512x512
+:pivotpoints=enabled
+:borders=disabled
+:alphahandling=ClearTransparentPixels
+
+patrollerIdle;1;211;372;300; 0.5;0.5083333333333333; 0;0;0;0; 21;186;285;167;246;242;250;214;290;252;290;297;269;339;140;372;138;372;96;299;66;290;5;277;0;129;0;104;42;82;54;13;12;0;64;0;155;64;144;116;267;171;300; 19;1;19;20;16;17;18;14;16;18;1;18;19;14;15;16;13;14;18;1;13;18;9;10;11;9;11;12;6;8;9;6;7;8;9;13;1;2;5;6;2;4;5;2;3;4;9;1;2;9;2;6;13;9;12;0;1;20

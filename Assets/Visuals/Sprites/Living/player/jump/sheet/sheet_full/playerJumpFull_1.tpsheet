@@ -1,0 +1,75 @@
+#
+# Sprite sheet data for Unity.
+#
+# To import these sprites into your Unity project, download "TexturePackerImporter":
+# https://www.codeandweb.com/texturepacker/unity
+#
+# $TexturePacker:SmartUpdate:4abac94fca0dec7e519bc8882fe320b5:46d6e5c77b8174a2648425f18b098b3f:120805b4caf6961fa349fc1b77a216c0$
+#
+:format=40300
+:texture=playerJumpFull_1.png
+:size=2048x512
+:pivotpoints=enabled
+:borders=disabled
+:alphahandling=ClearTransparentPixels
+
+playerJumpFull0001;0;349;120;163; 0.5;0.5; 0;0;0;0
+playerJumpFull0002;120;349;120;163; 0.5;0.5; 0;0;0;0
+playerJumpFull0003;240;349;120;163; 0.5;0.5; 0;0;0;0
+playerJumpFull0004;360;349;120;163; 0.5;0.5; 0;0;0;0
+playerJumpFull0005;480;349;120;163; 0.5;0.5; 0;0;0;0
+playerJumpFull0006;600;349;120;163; 0.5;0.5; 0;0;0;0
+playerJumpFull0007;720;349;120;163; 0.5;0.5; 0;0;0;0
+playerJumpFull0008;840;349;120;163; 0.5;0.5; 0;0;0;0
+playerJumpFull0009;960;349;120;163; 0.5;0.5; 0;0;0;0
+playerJumpFull0010;1080;349;120;163; 0.5;0.5; 0;0;0;0
+playerJumpFull0011;1200;349;120;163; 0.5;0.5; 0;0;0;0
+playerJumpFull0012;1320;349;120;163; 0.5;0.5; 0;0;0;0
+playerJumpFull0013;1440;349;120;163; 0.5;0.5; 0;0;0;0
+playerJumpFull0014;1560;349;120;163; 0.5;0.5; 0;0;0;0
+playerJumpFull0015;1560;349;120;163; 0.5;0.5; 0;0;0;0
+playerJumpFull0016;1560;349;120;163; 0.5;0.5; 0;0;0;0
+playerJumpFull0017;1680;349;120;163; 0.5;0.5; 0;0;0;0
+playerJumpFull0018;1680;349;120;163; 0.5;0.5; 0;0;0;0
+playerJumpFull0019;1680;349;120;163; 0.5;0.5; 0;0;0;0
+playerJumpFull0020;1680;349;120;163; 0.5;0.5; 0;0;0;0
+playerJumpFull0021;1800;349;120;163; 0.5;0.5; 0;0;0;0
+playerJumpFull0022;1800;349;120;163; 0.5;0.5; 0;0;0;0
+playerJumpFull0023;1920;349;120;163; 0.5;0.5; 0;0;0;0
+playerJumpFull0024;0;186;120;163; 0.5;0.5; 0;0;0;0
+playerJumpFull0025;0;186;120;163; 0.5;0.5; 0;0;0;0
+playerJumpFull0026;0;186;120;163; 0.5;0.5; 0;0;0;0
+playerJumpFull0027;120;186;120;163; 0.5;0.5; 0;0;0;0
+playerJumpFull0028;240;186;120;163; 0.5;0.5; 0;0;0;0
+playerJumpFull0029;240;186;120;163; 0.5;0.5; 0;0;0;0
+playerJumpFull0030;240;186;120;163; 0.5;0.5; 0;0;0;0
+playerJumpFull0031;360;186;120;163; 0.5;0.5; 0;0;0;0
+playerJumpFull0032;360;186;120;163; 0.5;0.5; 0;0;0;0
+playerJumpFull0033;360;186;120;163; 0.5;0.5; 0;0;0;0
+playerJumpFull0034;480;186;120;163; 0.5;0.5; 0;0;0;0
+playerJumpFull0035;480;186;120;163; 0.5;0.5; 0;0;0;0
+playerJumpFull0036;600;186;120;163; 0.5;0.5; 0;0;0;0
+playerJumpFull0037;720;186;120;163; 0.5;0.5; 0;0;0;0
+playerJumpFull0038;720;186;120;163; 0.5;0.5; 0;0;0;0
+playerJumpFull0039;720;186;120;163; 0.5;0.5; 0;0;0;0
+playerJumpFull0040;840;186;120;163; 0.5;0.5; 0;0;0;0
+playerJumpFull0041;960;186;120;163; 0.5;0.5; 0;0;0;0
+playerJumpFull0042;960;186;120;163; 0.5;0.5; 0;0;0;0
+playerJumpFull0043;960;186;120;163; 0.5;0.5; 0;0;0;0
+playerJumpFull0044;1080;186;120;163; 0.5;0.5; 0;0;0;0
+playerJumpFull0045;1080;186;120;163; 0.5;0.5; 0;0;0;0
+playerJumpFull0046;1080;186;120;163; 0.5;0.5; 0;0;0;0
+playerJumpFull0047;1200;186;120;163; 0.5;0.5; 0;0;0;0
+playerJumpFull0048;1200;186;120;163; 0.5;0.5; 0;0;0;0
+playerJumpFull0049;1200;186;120;163; 0.5;0.5; 0;0;0;0
+playerJumpFull0050;1320;186;120;163; 0.5;0.5; 0;0;0;0
+playerJumpFull0051;1320;186;120;163; 0.5;0.5; 0;0;0;0
+playerJumpFull0052;1320;186;120;163; 0.5;0.5; 0;0;0;0
+playerJumpFull0053;1320;186;120;163; 0.5;0.5; 0;0;0;0
+playerJumpFull0054;1440;186;120;163; 0.5;0.5; 0;0;0;0
+playerJumpFull0055;1440;186;120;163; 0.5;0.5; 0;0;0;0
+playerJumpFull0056;1440;186;120;163; 0.5;0.5; 0;0;0;0
+playerJumpFull0057;1560;186;120;163; 0.5;0.5; 0;0;0;0
+playerJumpFull0058;1680;186;120;163; 0.5;0.5; 0;0;0;0
+playerJumpFull0059;1800;186;120;163; 0.5;0.5; 0;0;0;0
+playerJumpFull0060;1920;186;120;163; 0.5;0.5; 0;0;0;0

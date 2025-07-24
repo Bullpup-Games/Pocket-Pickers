@@ -1,0 +1,35 @@
+#
+# Sprite sheet data for Unity.
+#
+# To import these sprites into your Unity project, download "TexturePackerImporter":
+# https://www.codeandweb.com/texturepacker/unity
+#
+# $TexturePacker:SmartUpdate:4db01da01eefb8a42cf31a0765101c5d:4dbe3b8f3f78cf6626f3ee8478687480:ecbb559c15cf16dd049af80ce108d1a3$
+#
+:format=40300
+:texture=sin_small_blue_1.png
+:size=256x256
+:pivotpoints=enabled
+:borders=disabled
+:alphahandling=ClearTransparentPixels
+
+sin_small_blue_idle0001;0;9;41;247; 0.5;0.5; 0;0;0;0
+sin_small_blue_idle0002;0;9;41;247; 0.5;0.5; 0;0;0;0
+sin_small_blue_idle0003;0;9;41;247; 0.5;0.5; 0;0;0;0
+sin_small_blue_idle0004;0;9;41;247; 0.5;0.5; 0;0;0;0
+sin_small_blue_idle0005;41;9;41;247; 0.5;0.5; 0;0;0;0
+sin_small_blue_idle0006;41;9;41;247; 0.5;0.5; 0;0;0;0
+sin_small_blue_idle0007;41;9;41;247; 0.5;0.5; 0;0;0;0
+sin_small_blue_idle0008;41;9;41;247; 0.5;0.5; 0;0;0;0
+sin_small_blue_idle0009;41;9;41;247; 0.5;0.5; 0;0;0;0
+sin_small_blue_idle0010;82;9;41;247; 0.5;0.5; 0;0;0;0
+sin_small_blue_idle0011;82;9;41;247; 0.5;0.5; 0;0;0;0
+sin_small_blue_idle0012;82;9;41;247; 0.5;0.5; 0;0;0;0
+sin_small_blue_idle0013;82;9;41;247; 0.5;0.5; 0;0;0;0
+sin_small_blue_idle0014;82;9;41;247; 0.5;0.5; 0;0;0;0
+sin_small_blue_idle0015;123;9;41;247; 0.5;0.5; 0;0;0;0
+sin_small_blue_idle0016;123;9;41;247; 0.5;0.5; 0;0;0;0
+sin_small_blue_idle0017;123;9;41;247; 0.5;0.5; 0;0;0;0
+sin_small_blue_idle0018;123;9;41;247; 0.5;0.5; 0;0;0;0
+sin_small_blue_idle0019;123;9;41;247; 0.5;0.5; 0;0;0;0
+sin_small_blue_idle0020;0;9;41;247; 0.5;0.5; 0;0;0;0

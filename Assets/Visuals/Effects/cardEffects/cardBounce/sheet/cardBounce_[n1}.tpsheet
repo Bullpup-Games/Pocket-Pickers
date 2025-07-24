@@ -1,0 +1,22 @@
+#
+# Sprite sheet data for Unity.
+#
+# To import these sprites into your Unity project, download "TexturePackerImporter":
+# https://www.codeandweb.com/texturepacker/unity
+#
+# $TexturePacker:SmartUpdate:8b1956897616fe3c9d477c7994178f2e:d69194baf90d416003d9b83386d51cad:0300b3aa129574a6761ca84a5c60b081$
+#
+:format=40300
+:texture=cardBounce_[n1}.png
+:size=2048x512
+:pivotpoints=enabled
+:borders=disabled
+:alphahandling=ClearTransparentPixels
+
+cardBounce_10001;0;232;280;280; 0.5;0.5; 0;0;0;0
+cardBounce_10002;0;232;280;280; 0.5;0.5; 0;0;0;0
+cardBounce_10003;280;232;280;280; 0.5;0.5; 0;0;0;0
+cardBounce_10004;560;232;280;280; 0.5;0.5; 0;0;0;0
+cardBounce_10005;840;232;280;280; 0.5;0.5; 0;0;0;0
+cardBounce_10006;1120;232;280;280; 0.5;0.5; 0;0;0;0
+cardBounce_10007;1400;232;280;280; 0.5;0.5; 0;0;0;0

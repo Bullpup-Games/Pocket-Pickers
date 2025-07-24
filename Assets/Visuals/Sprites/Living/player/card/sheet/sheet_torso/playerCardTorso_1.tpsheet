@@ -1,0 +1,45 @@
+#
+# Sprite sheet data for Unity.
+#
+# To import these sprites into your Unity project, download "TexturePackerImporter":
+# https://www.codeandweb.com/texturepacker/unity
+#
+# $TexturePacker:SmartUpdate:2be4fb71f8625abdc8f96a2638d11de6:96d3eb97e514dc9179cc9a3a0c3a9d72:e1a084e05733542c6edce1d429abd767$
+#
+:format=40300
+:texture=playerCardTorso_1.png
+:size=4096x4096
+:pivotpoints=enabled
+:borders=disabled
+:alphahandling=ClearTransparentPixels
+
+playerThrowTorso0001;0;3539;718;557; 0.5;0.5; 0;0;0;0
+playerThrowTorso0002;718;3539;718;557; 0.5;0.5; 0;0;0;0
+playerThrowTorso0003;1436;3539;718;557; 0.5;0.5; 0;0;0;0
+playerThrowTorso0004;2154;3539;718;557; 0.5;0.5; 0;0;0;0
+playerThrowTorso0005;1436;3539;718;557; 0.5;0.5; 0;0;0;0
+playerThrowTorso0006;2154;3539;718;557; 0.5;0.5; 0;0;0;0
+playerThrowTorso0007;2872;3539;718;557; 0.5;0.5; 0;0;0;0
+playerThrowTorso0008;0;2982;718;557; 0.5;0.5; 0;0;0;0
+playerThrowTorso0009;718;2982;718;557; 0.5;0.5; 0;0;0;0
+playerThrowTorso0010;1436;2982;718;557; 0.5;0.5; 0;0;0;0
+playerThrowTorso0011;2154;2982;718;557; 0.5;0.5; 0;0;0;0
+playerThrowTorso0012;2872;2982;718;557; 0.5;0.5; 0;0;0;0
+playerThrowTorso0013;0;2425;718;557; 0.5;0.5; 0;0;0;0
+playerThrowTorso0014;718;2425;718;557; 0.5;0.5; 0;0;0;0
+playerThrowTorso0015;1436;2425;718;557; 0.5;0.5; 0;0;0;0
+playerThrowTorso0016;2154;2425;718;557; 0.5;0.5; 0;0;0;0
+playerThrowTorso0017;2872;2425;718;557; 0.5;0.5; 0;0;0;0
+playerThrowTorso0018;0;1868;718;557; 0.5;0.5; 0;0;0;0
+playerThrowTorso0019;718;1868;718;557; 0.5;0.5; 0;0;0;0
+playerThrowTorso0020;1436;1868;718;557; 0.5;0.5; 0;0;0;0
+playerThrowTorso0021;2154;1868;718;557; 0.5;0.5; 0;0;0;0
+playerThrowTorso0022;2154;1868;718;557; 0.5;0.5; 0;0;0;0
+playerThrowTorso0023;2154;1868;718;557; 0.5;0.5; 0;0;0;0
+playerThrowTorso0024;2154;1868;718;557; 0.5;0.5; 0;0;0;0
+playerThrowTorso0025;2154;1868;718;557; 0.5;0.5; 0;0;0;0
+playerThrowTorso0026;2154;1868;718;557; 0.5;0.5; 0;0;0;0
+playerThrowTorso0027;2154;1868;718;557; 0.5;0.5; 0;0;0;0
+playerThrowTorso0028;2154;1868;718;557; 0.5;0.5; 0;0;0;0
+playerThrowTorso0029;2154;1868;718;557; 0.5;0.5; 0;0;0;0
+playerThrowTorso0030;2154;1868;718;557; 0.5;0.5; 0;0;0;0

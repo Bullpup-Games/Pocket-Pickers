@@ -1,0 +1,16 @@
+#
+# Sprite sheet data for Unity.
+#
+# To import these sprites into your Unity project, download "TexturePackerImporter":
+# https://www.codeandweb.com/texturepacker/unity
+#
+# $TexturePacker:SmartUpdate:50eaa99ed4637b7cdd36ab6b4e25ae7b:112d0b17c2753febd02f52c2dde53860:90ae3f21075bf042909743866dd21f89$
+#
+:format=40300
+:texture=controlsTooltip_1.png
+:size=1024x256
+:pivotpoints=enabled
+:borders=disabled
+:alphahandling=ClearTransparentPixels
+
+controlsTooltips1;0;94;556;162; 0.5;0.5; 0;0;0;0
