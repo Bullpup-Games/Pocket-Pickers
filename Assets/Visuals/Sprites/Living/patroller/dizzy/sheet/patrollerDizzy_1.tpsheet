@@ -1,0 +1,39 @@
+#
+# Sprite sheet data for Unity.
+#
+# To import these sprites into your Unity project, download "TexturePackerImporter":
+# https://www.codeandweb.com/texturepacker/unity
+#
+# $TexturePacker:SmartUpdate:707d17cbe62868d3a10ea2ea05684db8:6c0fdcaea7a33372e3d3c8f901a30efc:23430516333c0d67366e63e0ed9dcd5f$
+#
+:format=40300
+:texture=patrollerDizzy_1.png
+:size=2048x512
+:pivotpoints=enabled
+:borders=disabled
+:alphahandling=ClearTransparentPixels
+
+patrollerDizzy0001;0;199;343;313; 0.5;0.5; 0;0;0;0
+patrollerDizzy0002;0;199;343;313; 0.5;0.5; 0;0;0;0
+patrollerDizzy0003;0;199;343;313; 0.5;0.5; 0;0;0;0
+patrollerDizzy0004;0;199;343;313; 0.5;0.5; 0;0;0;0
+patrollerDizzy0005;0;199;343;313; 0.5;0.5; 0;0;0;0
+patrollerDizzy0006;343;199;343;313; 0.5;0.5; 0;0;0;0
+patrollerDizzy0007;343;199;343;313; 0.5;0.5; 0;0;0;0
+patrollerDizzy0008;343;199;343;313; 0.5;0.5; 0;0;0;0
+patrollerDizzy0009;343;199;343;313; 0.5;0.5; 0;0;0;0
+patrollerDizzy0010;343;199;343;313; 0.5;0.5; 0;0;0;0
+patrollerDizzy0011;343;199;343;313; 0.5;0.5; 0;0;0;0
+patrollerDizzy0012;686;199;343;313; 0.5;0.5; 0;0;0;0
+patrollerDizzy0013;686;199;343;313; 0.5;0.5; 0;0;0;0
+patrollerDizzy0014;686;199;343;313; 0.5;0.5; 0;0;0;0
+patrollerDizzy0015;686;199;343;313; 0.5;0.5; 0;0;0;0
+patrollerDizzy0016;686;199;343;313; 0.5;0.5; 0;0;0;0
+patrollerDizzy0017;686;199;343;313; 0.5;0.5; 0;0;0;0
+patrollerDizzy0018;1029;199;343;313; 0.5;0.5; 0;0;0;0
+patrollerDizzy0019;1029;199;343;313; 0.5;0.5; 0;0;0;0
+patrollerDizzy0020;1029;199;343;313; 0.5;0.5; 0;0;0;0
+patrollerDizzy0021;1029;199;343;313; 0.5;0.5; 0;0;0;0
+patrollerDizzy0022;1029;199;343;313; 0.5;0.5; 0;0;0;0
+patrollerDizzy0023;1029;199;343;313; 0.5;0.5; 0;0;0;0
+patrollerDizzy0024;1029;199;343;313; 0.5;0.5; 0;0;0;0

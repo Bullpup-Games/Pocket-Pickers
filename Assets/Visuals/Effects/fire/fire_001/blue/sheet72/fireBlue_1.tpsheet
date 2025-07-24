@@ -1,0 +1,35 @@
+#
+# Sprite sheet data for Unity.
+#
+# To import these sprites into your Unity project, download "TexturePackerImporter":
+# https://www.codeandweb.com/texturepacker/unity
+#
+# $TexturePacker:SmartUpdate:f52e32a8ee8e9d4325459e70be6c9b41:8227fb458421fe9ccf86767b515da4e7:f2319bf95aecdb6bfe8d5c23610434a5$
+#
+:format=40300
+:texture=fireBlue_1.png
+:size=128x64
+:pivotpoints=enabled
+:borders=disabled
+:alphahandling=ClearTransparentPixels
+
+fire_blue_10001;0;11;25;53; 0.5;0.5; 0;0;0;0
+fire_blue_10002;0;11;25;53; 0.5;0.5; 0;0;0;0
+fire_blue_10003;0;11;25;53; 0.5;0.5; 0;0;0;0
+fire_blue_10004;0;11;25;53; 0.5;0.5; 0;0;0;0
+fire_blue_10005;25;11;25;53; 0.5;0.5; 0;0;0;0
+fire_blue_10006;25;11;25;53; 0.5;0.5; 0;0;0;0
+fire_blue_10007;25;11;25;53; 0.5;0.5; 0;0;0;0
+fire_blue_10008;25;11;25;53; 0.5;0.5; 0;0;0;0
+fire_blue_10009;25;11;25;53; 0.5;0.5; 0;0;0;0
+fire_blue_10010;50;11;25;53; 0.5;0.5; 0;0;0;0
+fire_blue_10011;50;11;25;53; 0.5;0.5; 0;0;0;0
+fire_blue_10012;50;11;25;53; 0.5;0.5; 0;0;0;0
+fire_blue_10013;50;11;25;53; 0.5;0.5; 0;0;0;0
+fire_blue_10014;50;11;25;53; 0.5;0.5; 0;0;0;0
+fire_blue_10015;75;11;25;53; 0.5;0.5; 0;0;0;0
+fire_blue_10016;75;11;25;53; 0.5;0.5; 0;0;0;0
+fire_blue_10017;75;11;25;53; 0.5;0.5; 0;0;0;0
+fire_blue_10018;75;11;25;53; 0.5;0.5; 0;0;0;0
+fire_blue_10019;75;11;25;53; 0.5;0.5; 0;0;0;0
+fire_blue_10020;100;11;25;53; 0.5;0.5; 0;0;0;0

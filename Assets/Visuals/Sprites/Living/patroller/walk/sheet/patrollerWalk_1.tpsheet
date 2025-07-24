@@ -1,0 +1,32 @@
+#
+# Sprite sheet data for Unity.
+#
+# To import these sprites into your Unity project, download "TexturePackerImporter":
+# https://www.codeandweb.com/texturepacker/unity
+#
+# $TexturePacker:SmartUpdate:ebe1bd90e23aba1d1f2d99f3d3a804d9:2e968e01f9b0da470a5dfba80d98a2a8:fb77f5c24fbc047e07e3abcc4a30225e$
+#
+:format=40300
+:texture=patrollerWalk_1.png
+:size=2048x512
+:pivotpoints=enabled
+:borders=disabled
+:alphahandling=ClearTransparentPixels
+
+patrollerWalk0001;0;207;372;305; 0.5;0.5; 0;0;0;0
+patrollerWalk0002;0;207;372;305; 0.5;0.5; 0;0;0;0
+patrollerWalk0003;0;207;372;305; 0.5;0.5; 0;0;0;0
+patrollerWalk0004;0;207;372;305; 0.5;0.5; 0;0;0;0
+patrollerWalk0005;372;207;372;305; 0.5;0.5; 0;0;0;0
+patrollerWalk0006;372;207;372;305; 0.5;0.5; 0;0;0;0
+patrollerWalk0007;372;207;372;305; 0.5;0.5; 0;0;0;0
+patrollerWalk0008;372;207;372;305; 0.5;0.5; 0;0;0;0
+patrollerWalk0009;744;207;372;305; 0.5;0.5; 0;0;0;0
+patrollerWalk0010;744;207;372;305; 0.5;0.5; 0;0;0;0
+patrollerWalk0011;744;207;372;305; 0.5;0.5; 0;0;0;0
+patrollerWalk0012;744;207;372;305; 0.5;0.5; 0;0;0;0
+patrollerWalk0013;1116;207;372;305; 0.5;0.5; 0;0;0;0
+patrollerWalk0014;1116;207;372;305; 0.5;0.5; 0;0;0;0
+patrollerWalk0015;1116;207;372;305; 0.5;0.5; 0;0;0;0
+patrollerWalk0016;1116;207;372;305; 0.5;0.5; 0;0;0;0
+patrollerWalk0017;1116;207;372;305; 0.5;0.5; 0;0;0;0

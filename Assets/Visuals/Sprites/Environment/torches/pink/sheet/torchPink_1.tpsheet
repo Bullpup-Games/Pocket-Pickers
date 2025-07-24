@@ -1,0 +1,35 @@
+#
+# Sprite sheet data for Unity.
+#
+# To import these sprites into your Unity project, download "TexturePackerImporter":
+# https://www.codeandweb.com/texturepacker/unity
+#
+# $TexturePacker:SmartUpdate:94657766bafad214ade86434f5a2f19a:de488ae97622105318173af06d15928a:dd86709411d126d934d6cffe06cf053b$
+#
+:format=40300
+:texture=torchPink_1.png
+:size=64x256
+:pivotpoints=enabled
+:borders=disabled
+:alphahandling=ClearTransparentPixels
+
+torch_pink_10001;0;176;32;80; 0.5;0.5; 0;0;0;0
+torch_pink_10002;0;176;32;80; 0.5;0.5; 0;0;0;0
+torch_pink_10003;0;176;32;80; 0.5;0.5; 0;0;0;0
+torch_pink_10004;0;176;32;80; 0.5;0.5; 0;0;0;0
+torch_pink_10005;32;176;32;80; 0.5;0.5; 0;0;0;0
+torch_pink_10006;32;176;32;80; 0.5;0.5; 0;0;0;0
+torch_pink_10007;32;176;32;80; 0.5;0.5; 0;0;0;0
+torch_pink_10008;32;176;32;80; 0.5;0.5; 0;0;0;0
+torch_pink_10009;32;176;32;80; 0.5;0.5; 0;0;0;0
+torch_pink_10010;0;96;32;80; 0.5;0.5; 0;0;0;0
+torch_pink_10011;0;96;32;80; 0.5;0.5; 0;0;0;0
+torch_pink_10012;0;96;32;80; 0.5;0.5; 0;0;0;0
+torch_pink_10013;0;96;32;80; 0.5;0.5; 0;0;0;0
+torch_pink_10014;0;96;32;80; 0.5;0.5; 0;0;0;0
+torch_pink_10015;32;96;32;80; 0.5;0.5; 0;0;0;0
+torch_pink_10016;32;96;32;80; 0.5;0.5; 0;0;0;0
+torch_pink_10017;32;96;32;80; 0.5;0.5; 0;0;0;0
+torch_pink_10018;32;96;32;80; 0.5;0.5; 0;0;0;0
+torch_pink_10019;32;96;32;80; 0.5;0.5; 0;0;0;0
+torch_pink_10020;0;16;32;80; 0.5;0.5; 0;0;0;0

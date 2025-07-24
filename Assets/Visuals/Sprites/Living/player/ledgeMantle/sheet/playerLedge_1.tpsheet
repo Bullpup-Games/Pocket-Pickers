@@ -1,0 +1,16 @@
+#
+# Sprite sheet data for Unity.
+#
+# To import these sprites into your Unity project, download "TexturePackerImporter":
+# https://www.codeandweb.com/texturepacker/unity
+#
+# $TexturePacker:SmartUpdate:ff80c78cac21df84f2ffae6aaf3cfc7e:2168672d25ac9a34c04cbec8977f542a:e96496abc5aa3f504b51b13863f4024d$
+#
+:format=40300
+:texture=playerLedge_1.png
+:size=128x256
+:pivotpoints=enabled
+:borders=disabled
+:alphahandling=ClearTransparentPixels
+
+playerLedgeFull;0;122;93;134; 0.5;0.5; 0;0;0;0

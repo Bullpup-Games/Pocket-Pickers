@@ -1,0 +1,39 @@
+#
+# Sprite sheet data for Unity.
+#
+# To import these sprites into your Unity project, download "TexturePackerImporter":
+# https://www.codeandweb.com/texturepacker/unity
+#
+# $TexturePacker:SmartUpdate:c21893b32e96d122dd2ea58354ab3b08:baa5c21827563bfbc24d80d9cb84c52f:a55880a9bd36062ee7f082f6030515c5$
+#
+:format=40300
+:texture=sniperDizzy_1.png
+:size=2048x512
+:pivotpoints=enabled
+:borders=disabled
+:alphahandling=ClearTransparentPixels
+
+sniperDizzy0001;0;203;347;309; 0.5;0.5; 0;0;0;0
+sniperDizzy0002;0;203;347;309; 0.5;0.5; 0;0;0;0
+sniperDizzy0003;0;203;347;309; 0.5;0.5; 0;0;0;0
+sniperDizzy0004;0;203;347;309; 0.5;0.5; 0;0;0;0
+sniperDizzy0005;0;203;347;309; 0.5;0.5; 0;0;0;0
+sniperDizzy0006;347;203;347;309; 0.5;0.5; 0;0;0;0
+sniperDizzy0007;347;203;347;309; 0.5;0.5; 0;0;0;0
+sniperDizzy0008;694;203;347;309; 0.5;0.5; 0;0;0;0
+sniperDizzy0009;694;203;347;309; 0.5;0.5; 0;0;0;0
+sniperDizzy0010;694;203;347;309; 0.5;0.5; 0;0;0;0
+sniperDizzy0011;694;203;347;309; 0.5;0.5; 0;0;0;0
+sniperDizzy0012;1041;203;347;309; 0.5;0.5; 0;0;0;0
+sniperDizzy0013;1041;203;347;309; 0.5;0.5; 0;0;0;0
+sniperDizzy0014;1041;203;347;309; 0.5;0.5; 0;0;0;0
+sniperDizzy0015;1041;203;347;309; 0.5;0.5; 0;0;0;0
+sniperDizzy0016;1041;203;347;309; 0.5;0.5; 0;0;0;0
+sniperDizzy0017;1041;203;347;309; 0.5;0.5; 0;0;0;0
+sniperDizzy0018;1388;203;347;309; 0.5;0.5; 0;0;0;0
+sniperDizzy0019;1388;203;347;309; 0.5;0.5; 0;0;0;0
+sniperDizzy0020;1388;203;347;309; 0.5;0.5; 0;0;0;0
+sniperDizzy0021;1388;203;347;309; 0.5;0.5; 0;0;0;0
+sniperDizzy0022;1388;203;347;309; 0.5;0.5; 0;0;0;0
+sniperDizzy0023;1388;203;347;309; 0.5;0.5; 0;0;0;0
+sniperDizzy0024;1388;203;347;309; 0.5;0.5; 0;0;0;0

@@ -1,0 +1,35 @@
+#
+# Sprite sheet data for Unity.
+#
+# To import these sprites into your Unity project, download "TexturePackerImporter":
+# https://www.codeandweb.com/texturepacker/unity
+#
+# $TexturePacker:SmartUpdate:54979207865ff3ca0fac448c305d2d21:fa2a56cd8b1f9493d93797ccf34cbdac:3f2218aaeb1ace0e04f9cc1e8bf2b816$
+#
+:format=40300
+:texture=firePink_1.png
+:size=128x64
+:pivotpoints=enabled
+:borders=disabled
+:alphahandling=ClearTransparentPixels
+
+fire_pink_10001;0;11;25;53; 0.5;0.5; 0;0;0;0
+fire_pink_10002;0;11;25;53; 0.5;0.5; 0;0;0;0
+fire_pink_10003;0;11;25;53; 0.5;0.5; 0;0;0;0
+fire_pink_10004;0;11;25;53; 0.5;0.5; 0;0;0;0
+fire_pink_10005;25;11;25;53; 0.5;0.5; 0;0;0;0
+fire_pink_10006;25;11;25;53; 0.5;0.5; 0;0;0;0
+fire_pink_10007;25;11;25;53; 0.5;0.5; 0;0;0;0
+fire_pink_10008;25;11;25;53; 0.5;0.5; 0;0;0;0
+fire_pink_10009;25;11;25;53; 0.5;0.5; 0;0;0;0
+fire_pink_10010;50;11;25;53; 0.5;0.5; 0;0;0;0
+fire_pink_10011;50;11;25;53; 0.5;0.5; 0;0;0;0
+fire_pink_10012;50;11;25;53; 0.5;0.5; 0;0;0;0
+fire_pink_10013;50;11;25;53; 0.5;0.5; 0;0;0;0
+fire_pink_10014;50;11;25;53; 0.5;0.5; 0;0;0;0
+fire_pink_10015;75;11;25;53; 0.5;0.5; 0;0;0;0
+fire_pink_10016;75;11;25;53; 0.5;0.5; 0;0;0;0
+fire_pink_10017;75;11;25;53; 0.5;0.5; 0;0;0;0
+fire_pink_10018;75;11;25;53; 0.5;0.5; 0;0;0;0
+fire_pink_10019;75;11;25;53; 0.5;0.5; 0;0;0;0
+fire_pink_10020;100;11;25;53; 0.5;0.5; 0;0;0;0

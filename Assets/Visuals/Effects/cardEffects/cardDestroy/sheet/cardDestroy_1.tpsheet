@@ -1,0 +1,23 @@
+#
+# Sprite sheet data for Unity.
+#
+# To import these sprites into your Unity project, download "TexturePackerImporter":
+# https://www.codeandweb.com/texturepacker/unity
+#
+# $TexturePacker:SmartUpdate:00d5f1fcd1221f8501fe2f14bd7362f0:b0157f394fcccf0a0249e36a04825068:0d2d633b27cc0d25db4e48b63b61efd2$
+#
+:format=40300
+:texture=cardDestroy_1.png
+:size=2048x1024
+:pivotpoints=enabled
+:borders=disabled
+:alphahandling=ClearTransparentPixels
+
+destroyCard_10001;0;656;471;368; 0.5;0.5; 0;0;0;0
+destroyCard_10002;471;656;471;368; 0.5;0.5; 0;0;0;0
+destroyCard_10003;942;656;471;368; 0.5;0.5; 0;0;0;0
+destroyCard_10004;942;656;471;368; 0.5;0.5; 0;0;0;0
+destroyCard_10005;1413;656;471;368; 0.5;0.5; 0;0;0;0
+destroyCard_10006;0;288;471;368; 0.5;0.5; 0;0;0;0
+destroyCard_10007;471;288;471;368; 0.5;0.5; 0;0;0;0
+destroyCard_10008;942;288;471;368; 0.5;0.5; 0;0;0;0

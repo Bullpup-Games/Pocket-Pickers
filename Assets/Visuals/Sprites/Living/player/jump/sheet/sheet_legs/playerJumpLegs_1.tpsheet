@@ -1,0 +1,75 @@
+#
+# Sprite sheet data for Unity.
+#
+# To import these sprites into your Unity project, download "TexturePackerImporter":
+# https://www.codeandweb.com/texturepacker/unity
+#
+# $TexturePacker:SmartUpdate:aed8a657043c6accb600f34270c0adde:beba20a3a48ac0775bede89ab0e5f576:74244f9ae48659e9d7fba4e3d0390f33$
+#
+:format=40300
+:texture=playerJumpLegs_1.png
+:size=1024x256
+:pivotpoints=enabled
+:borders=disabled
+:alphahandling=ClearTransparentPixels
+
+playerJumpLegs0001;0;77;199;179; 0.5;0.5; 0;0;0;0
+playerJumpLegs0002;0;77;199;179; 0.5;0.5; 0;0;0;0
+playerJumpLegs0003;0;77;199;179; 0.5;0.5; 0;0;0;0
+playerJumpLegs0004;0;77;199;179; 0.5;0.5; 0;0;0;0
+playerJumpLegs0005;199;77;199;179; 0.5;0.5; 0;0;0;0
+playerJumpLegs0006;199;77;199;179; 0.5;0.5; 0;0;0;0
+playerJumpLegs0007;398;77;199;179; 0.5;0.5; 0;0;0;0
+playerJumpLegs0008;398;77;199;179; 0.5;0.5; 0;0;0;0
+playerJumpLegs0009;199;77;199;179; 0.5;0.5; 0;0;0;0
+playerJumpLegs0010;199;77;199;179; 0.5;0.5; 0;0;0;0
+playerJumpLegs0011;199;77;199;179; 0.5;0.5; 0;0;0;0
+playerJumpLegs0012;199;77;199;179; 0.5;0.5; 0;0;0;0
+playerJumpLegs0013;199;77;199;179; 0.5;0.5; 0;0;0;0
+playerJumpLegs0014;199;77;199;179; 0.5;0.5; 0;0;0;0
+playerJumpLegs0015;199;77;199;179; 0.5;0.5; 0;0;0;0
+playerJumpLegs0016;199;77;199;179; 0.5;0.5; 0;0;0;0
+playerJumpLegs0017;199;77;199;179; 0.5;0.5; 0;0;0;0
+playerJumpLegs0018;199;77;199;179; 0.5;0.5; 0;0;0;0
+playerJumpLegs0019;199;77;199;179; 0.5;0.5; 0;0;0;0
+playerJumpLegs0020;199;77;199;179; 0.5;0.5; 0;0;0;0
+playerJumpLegs0021;199;77;199;179; 0.5;0.5; 0;0;0;0
+playerJumpLegs0022;199;77;199;179; 0.5;0.5; 0;0;0;0
+playerJumpLegs0023;199;77;199;179; 0.5;0.5; 0;0;0;0
+playerJumpLegs0024;199;77;199;179; 0.5;0.5; 0;0;0;0
+playerJumpLegs0025;199;77;199;179; 0.5;0.5; 0;0;0;0
+playerJumpLegs0026;199;77;199;179; 0.5;0.5; 0;0;0;0
+playerJumpLegs0027;199;77;199;179; 0.5;0.5; 0;0;0;0
+playerJumpLegs0028;199;77;199;179; 0.5;0.5; 0;0;0;0
+playerJumpLegs0029;199;77;199;179; 0.5;0.5; 0;0;0;0
+playerJumpLegs0030;199;77;199;179; 0.5;0.5; 0;0;0;0
+playerJumpLegs0031;199;77;199;179; 0.5;0.5; 0;0;0;0
+playerJumpLegs0032;199;77;199;179; 0.5;0.5; 0;0;0;0
+playerJumpLegs0033;199;77;199;179; 0.5;0.5; 0;0;0;0
+playerJumpLegs0034;199;77;199;179; 0.5;0.5; 0;0;0;0
+playerJumpLegs0035;199;77;199;179; 0.5;0.5; 0;0;0;0
+playerJumpLegs0036;199;77;199;179; 0.5;0.5; 0;0;0;0
+playerJumpLegs0037;199;77;199;179; 0.5;0.5; 0;0;0;0
+playerJumpLegs0038;199;77;199;179; 0.5;0.5; 0;0;0;0
+playerJumpLegs0039;199;77;199;179; 0.5;0.5; 0;0;0;0
+playerJumpLegs0040;199;77;199;179; 0.5;0.5; 0;0;0;0
+playerJumpLegs0041;199;77;199;179; 0.5;0.5; 0;0;0;0
+playerJumpLegs0042;199;77;199;179; 0.5;0.5; 0;0;0;0
+playerJumpLegs0043;199;77;199;179; 0.5;0.5; 0;0;0;0
+playerJumpLegs0044;199;77;199;179; 0.5;0.5; 0;0;0;0
+playerJumpLegs0045;199;77;199;179; 0.5;0.5; 0;0;0;0
+playerJumpLegs0046;199;77;199;179; 0.5;0.5; 0;0;0;0
+playerJumpLegs0047;199;77;199;179; 0.5;0.5; 0;0;0;0
+playerJumpLegs0048;199;77;199;179; 0.5;0.5; 0;0;0;0
+playerJumpLegs0049;199;77;199;179; 0.5;0.5; 0;0;0;0
+playerJumpLegs0050;199;77;199;179; 0.5;0.5; 0;0;0;0
+playerJumpLegs0051;199;77;199;179; 0.5;0.5; 0;0;0;0
+playerJumpLegs0052;199;77;199;179; 0.5;0.5; 0;0;0;0
+playerJumpLegs0053;199;77;199;179; 0.5;0.5; 0;0;0;0
+playerJumpLegs0054;199;77;199;179; 0.5;0.5; 0;0;0;0
+playerJumpLegs0055;199;77;199;179; 0.5;0.5; 0;0;0;0
+playerJumpLegs0056;199;77;199;179; 0.5;0.5; 0;0;0;0
+playerJumpLegs0057;199;77;199;179; 0.5;0.5; 0;0;0;0
+playerJumpLegs0058;199;77;199;179; 0.5;0.5; 0;0;0;0
+playerJumpLegs0059;199;77;199;179; 0.5;0.5; 0;0;0;0
+playerJumpLegs0060;199;77;199;179; 0.5;0.5; 0;0;0;0

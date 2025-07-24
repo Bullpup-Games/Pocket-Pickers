@@ -1,0 +1,45 @@
+#
+# Sprite sheet data for Unity.
+#
+# To import these sprites into your Unity project, download "TexturePackerImporter":
+# https://www.codeandweb.com/texturepacker/unity
+#
+# $TexturePacker:SmartUpdate:b1cb93030846cc21da9337ddbf5bf1a0:bc350951205d251fbf58c7c31e6caa74:4f7f873563d148c3d020d4660c1f004c$
+#
+:format=40300
+:texture=playerCardFull_1.png
+:size=1024x1024
+:pivotpoints=enabled
+:borders=disabled
+:alphahandling=ClearTransparentPixels
+
+playerThrowFull0001;0;855;189;169; 0.5;0.5; 0;0;0;0
+playerThrowFull0002;189;855;189;169; 0.5;0.5; 0;0;0;0
+playerThrowFull0003;378;855;189;169; 0.5;0.5; 0;0;0;0
+playerThrowFull0004;567;855;189;169; 0.5;0.5; 0;0;0;0
+playerThrowFull0005;378;855;189;169; 0.5;0.5; 0;0;0;0
+playerThrowFull0006;567;855;189;169; 0.5;0.5; 0;0;0;0
+playerThrowFull0007;756;855;189;169; 0.5;0.5; 0;0;0;0
+playerThrowFull0008;0;686;189;169; 0.5;0.5; 0;0;0;0
+playerThrowFull0009;189;686;189;169; 0.5;0.5; 0;0;0;0
+playerThrowFull0010;378;686;189;169; 0.5;0.5; 0;0;0;0
+playerThrowFull0011;567;686;189;169; 0.5;0.5; 0;0;0;0
+playerThrowFull0012;756;686;189;169; 0.5;0.5; 0;0;0;0
+playerThrowFull0013;0;517;189;169; 0.5;0.5; 0;0;0;0
+playerThrowFull0014;189;517;189;169; 0.5;0.5; 0;0;0;0
+playerThrowFull0015;378;517;189;169; 0.5;0.5; 0;0;0;0
+playerThrowFull0016;567;517;189;169; 0.5;0.5; 0;0;0;0
+playerThrowFull0017;756;517;189;169; 0.5;0.5; 0;0;0;0
+playerThrowFull0018;0;348;189;169; 0.5;0.5; 0;0;0;0
+playerThrowFull0019;189;348;189;169; 0.5;0.5; 0;0;0;0
+playerThrowFull0020;378;348;189;169; 0.5;0.5; 0;0;0;0
+playerThrowFull0021;567;348;189;169; 0.5;0.5; 0;0;0;0
+playerThrowFull0022;567;348;189;169; 0.5;0.5; 0;0;0;0
+playerThrowFull0023;567;348;189;169; 0.5;0.5; 0;0;0;0
+playerThrowFull0024;567;348;189;169; 0.5;0.5; 0;0;0;0
+playerThrowFull0025;567;348;189;169; 0.5;0.5; 0;0;0;0
+playerThrowFull0026;567;348;189;169; 0.5;0.5; 0;0;0;0
+playerThrowFull0027;567;348;189;169; 0.5;0.5; 0;0;0;0
+playerThrowFull0028;567;348;189;169; 0.5;0.5; 0;0;0;0
+playerThrowFull0029;567;348;189;169; 0.5;0.5; 0;0;0;0
+playerThrowFull0030;567;348;189;169; 0.5;0.5; 0;0;0;0

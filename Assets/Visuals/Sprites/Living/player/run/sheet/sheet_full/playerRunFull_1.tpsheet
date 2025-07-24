@@ -1,0 +1,40 @@
+#
+# Sprite sheet data for Unity.
+#
+# To import these sprites into your Unity project, download "TexturePackerImporter":
+# https://www.codeandweb.com/texturepacker/unity
+#
+# $TexturePacker:SmartUpdate:cbf7f1eb2eadcb2e29f47fa24a2b5dba:a70d4e441ef7f4f5b3642b870b4eede3:ca0634f76e1a45de20f52c974b16dbd8$
+#
+:format=40300
+:texture=playerRunFull_1.png
+:size=512x512
+:pivotpoints=enabled
+:borders=disabled
+:alphahandling=ClearTransparentPixels
+
+playerRunFull0001;0;349;117;163; 0.5;0.5; 0;0;0;0
+playerRunFull0002;0;349;117;163; 0.5;0.5; 0;0;0;0
+playerRunFull0003;0;349;117;163; 0.5;0.5; 0;0;0;0
+playerRunFull0004;0;349;117;163; 0.5;0.5; 0;0;0;0
+playerRunFull0005;117;349;117;163; 0.5;0.5; 0;0;0;0
+playerRunFull0006;117;349;117;163; 0.5;0.5; 0;0;0;0
+playerRunFull0007;234;349;117;163; 0.5;0.5; 0;0;0;0
+playerRunFull0008;234;349;117;163; 0.5;0.5; 0;0;0;0
+playerRunFull0009;351;349;117;163; 0.5;0.5; 0;0;0;0
+playerRunFull0010;351;349;117;163; 0.5;0.5; 0;0;0;0
+playerRunFull0011;0;186;117;163; 0.5;0.5; 0;0;0;0
+playerRunFull0012;0;186;117;163; 0.5;0.5; 0;0;0;0
+playerRunFull0013;117;186;117;163; 0.5;0.5; 0;0;0;0
+playerRunFull0014;117;186;117;163; 0.5;0.5; 0;0;0;0
+playerRunFull0015;117;186;117;163; 0.5;0.5; 0;0;0;0
+playerRunFull0016;117;186;117;163; 0.5;0.5; 0;0;0;0
+playerRunFull0017;234;186;117;163; 0.5;0.5; 0;0;0;0
+playerRunFull0018;234;186;117;163; 0.5;0.5; 0;0;0;0
+playerRunFull0019;234;186;117;163; 0.5;0.5; 0;0;0;0
+playerRunFull0020;234;186;117;163; 0.5;0.5; 0;0;0;0
+playerRunFull0021;351;186;117;163; 0.5;0.5; 0;0;0;0
+playerRunFull0022;351;186;117;163; 0.5;0.5; 0;0;0;0
+playerRunFull0023;351;186;117;163; 0.5;0.5; 0;0;0;0
+playerRunFull0024;351;186;117;163; 0.5;0.5; 0;0;0;0
+playerRunFull0025;351;186;117;163; 0.5;0.5; 0;0;0;0

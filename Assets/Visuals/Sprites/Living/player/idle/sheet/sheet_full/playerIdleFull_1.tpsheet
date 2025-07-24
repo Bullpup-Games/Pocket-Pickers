@@ -1,0 +1,75 @@
+#
+# Sprite sheet data for Unity.
+#
+# To import these sprites into your Unity project, download "TexturePackerImporter":
+# https://www.codeandweb.com/texturepacker/unity
+#
+# $TexturePacker:SmartUpdate:eccaae52a15b473238d962c7dacbc977:af6da0be72cc30d51ec9512cb611e4ea:fd83a6913d1ca3359ad09fa7f74776be$
+#
+:format=40300
+:texture=playerIdleFull_1.png
+:size=2048x512
+:pivotpoints=enabled
+:borders=disabled
+:alphahandling=ClearTransparentPixels
+
+playerIdle_full0001;0;351;119;161; 0.5;0.5; 0;0;0;0
+playerIdle_full0002;119;351;119;161; 0.5;0.5; 0;0;0;0
+playerIdle_full0003;238;351;119;161; 0.5;0.5; 0;0;0;0
+playerIdle_full0004;357;351;119;161; 0.5;0.5; 0;0;0;0
+playerIdle_full0005;476;351;119;161; 0.5;0.5; 0;0;0;0
+playerIdle_full0006;595;351;119;161; 0.5;0.5; 0;0;0;0
+playerIdle_full0007;714;351;119;161; 0.5;0.5; 0;0;0;0
+playerIdle_full0008;833;351;119;161; 0.5;0.5; 0;0;0;0
+playerIdle_full0009;952;351;119;161; 0.5;0.5; 0;0;0;0
+playerIdle_full0010;1071;351;119;161; 0.5;0.5; 0;0;0;0
+playerIdle_full0011;1190;351;119;161; 0.5;0.5; 0;0;0;0
+playerIdle_full0012;1309;351;119;161; 0.5;0.5; 0;0;0;0
+playerIdle_full0013;1428;351;119;161; 0.5;0.5; 0;0;0;0
+playerIdle_full0014;1547;351;119;161; 0.5;0.5; 0;0;0;0
+playerIdle_full0015;1666;351;119;161; 0.5;0.5; 0;0;0;0
+playerIdle_full0016;1785;351;119;161; 0.5;0.5; 0;0;0;0
+playerIdle_full0017;1904;351;119;161; 0.5;0.5; 0;0;0;0
+playerIdle_full0018;0;190;119;161; 0.5;0.5; 0;0;0;0
+playerIdle_full0019;119;190;119;161; 0.5;0.5; 0;0;0;0
+playerIdle_full0020;238;190;119;161; 0.5;0.5; 0;0;0;0
+playerIdle_full0021;357;190;119;161; 0.5;0.5; 0;0;0;0
+playerIdle_full0022;476;190;119;161; 0.5;0.5; 0;0;0;0
+playerIdle_full0023;595;190;119;161; 0.5;0.5; 0;0;0;0
+playerIdle_full0024;714;190;119;161; 0.5;0.5; 0;0;0;0
+playerIdle_full0025;833;190;119;161; 0.5;0.5; 0;0;0;0
+playerIdle_full0026;952;190;119;161; 0.5;0.5; 0;0;0;0
+playerIdle_full0027;1071;190;119;161; 0.5;0.5; 0;0;0;0
+playerIdle_full0028;1190;190;119;161; 0.5;0.5; 0;0;0;0
+playerIdle_full0029;1309;190;119;161; 0.5;0.5; 0;0;0;0
+playerIdle_full0030;1428;190;119;161; 0.5;0.5; 0;0;0;0
+playerIdle_full0031;1309;190;119;161; 0.5;0.5; 0;0;0;0
+playerIdle_full0032;1547;190;119;161; 0.5;0.5; 0;0;0;0
+playerIdle_full0033;1666;190;119;161; 0.5;0.5; 0;0;0;0
+playerIdle_full0034;1785;190;119;161; 0.5;0.5; 0;0;0;0
+playerIdle_full0035;833;190;119;161; 0.5;0.5; 0;0;0;0
+playerIdle_full0036;714;190;119;161; 0.5;0.5; 0;0;0;0
+playerIdle_full0037;595;190;119;161; 0.5;0.5; 0;0;0;0
+playerIdle_full0038;1904;190;119;161; 0.5;0.5; 0;0;0;0
+playerIdle_full0039;0;29;119;161; 0.5;0.5; 0;0;0;0
+playerIdle_full0040;238;190;119;161; 0.5;0.5; 0;0;0;0
+playerIdle_full0041;119;29;119;161; 0.5;0.5; 0;0;0;0
+playerIdle_full0042;0;190;119;161; 0.5;0.5; 0;0;0;0
+playerIdle_full0043;238;29;119;161; 0.5;0.5; 0;0;0;0
+playerIdle_full0044;357;29;119;161; 0.5;0.5; 0;0;0;0
+playerIdle_full0045;1785;351;119;161; 0.5;0.5; 0;0;0;0
+playerIdle_full0046;476;29;119;161; 0.5;0.5; 0;0;0;0
+playerIdle_full0047;1547;351;119;161; 0.5;0.5; 0;0;0;0
+playerIdle_full0048;595;29;119;161; 0.5;0.5; 0;0;0;0
+playerIdle_full0049;714;29;119;161; 0.5;0.5; 0;0;0;0
+playerIdle_full0050;833;29;119;161; 0.5;0.5; 0;0;0;0
+playerIdle_full0051;952;29;119;161; 0.5;0.5; 0;0;0;0
+playerIdle_full0052;1071;29;119;161; 0.5;0.5; 0;0;0;0
+playerIdle_full0053;833;351;119;161; 0.5;0.5; 0;0;0;0
+playerIdle_full0054;1190;29;119;161; 0.5;0.5; 0;0;0;0
+playerIdle_full0055;595;351;119;161; 0.5;0.5; 0;0;0;0
+playerIdle_full0056;1309;29;119;161; 0.5;0.5; 0;0;0;0
+playerIdle_full0057;1428;29;119;161; 0.5;0.5; 0;0;0;0
+playerIdle_full0058;238;351;119;161; 0.5;0.5; 0;0;0;0
+playerIdle_full0059;1547;29;119;161; 0.5;0.5; 0;0;0;0
+playerIdle_full0060;1666;29;119;161; 0.5;0.5; 0;0;0;0

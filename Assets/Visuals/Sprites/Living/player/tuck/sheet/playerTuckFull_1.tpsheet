@@ -1,0 +1,47 @@
+#
+# Sprite sheet data for Unity.
+#
+# To import these sprites into your Unity project, download "TexturePackerImporter":
+# https://www.codeandweb.com/texturepacker/unity
+#
+# $TexturePacker:SmartUpdate:f21c3eb81bd7f151d2e212116bd123b0:bb560a1761558ce86e75429ffbab6df5:d590625d61b5270fe8bfe17298fbdf57$
+#
+:format=40300
+:texture=playerTuckFull_1.png
+:size=512x512
+:pivotpoints=enabled
+:borders=disabled
+:alphahandling=ClearTransparentPixels
+
+playerTuckFull0001;0;348;164;164; 0.5;0.5; 0;0;0;0
+playerTuckFull0002;0;348;164;164; 0.5;0.5; 0;0;0;0
+playerTuckFull0003;0;348;164;164; 0.5;0.5; 0;0;0;0
+playerTuckFull0004;0;348;164;164; 0.5;0.5; 0;0;0;0
+playerTuckFull0005;164;348;164;164; 0.5;0.5; 0;0;0;0
+playerTuckFull0006;164;348;164;164; 0.5;0.5; 0;0;0;0
+playerTuckFull0007;164;348;164;164; 0.5;0.5; 0;0;0;0
+playerTuckFull0008;164;348;164;164; 0.5;0.5; 0;0;0;0
+playerTuckFull0009;328;348;164;164; 0.5;0.5; 0;0;0;0
+playerTuckFull0010;328;348;164;164; 0.5;0.5; 0;0;0;0
+playerTuckFull0011;328;348;164;164; 0.5;0.5; 0;0;0;0
+playerTuckFull0012;328;348;164;164; 0.5;0.5; 0;0;0;0
+playerTuckFull0013;0;184;164;164; 0.5;0.5; 0;0;0;0
+playerTuckFull0014;0;184;164;164; 0.5;0.5; 0;0;0;0
+playerTuckFull0015;0;184;164;164; 0.5;0.5; 0;0;0;0
+playerTuckFull0016;0;184;164;164; 0.5;0.5; 0;0;0;0
+playerTuckFull0017;164;184;164;164; 0.5;0.5; 0;0;0;0
+playerTuckFull0018;164;184;164;164; 0.5;0.5; 0;0;0;0
+playerTuckFull0019;164;184;164;164; 0.5;0.5; 0;0;0;0
+playerTuckFull0020;164;184;164;164; 0.5;0.5; 0;0;0;0
+playerTuckFull0021;328;184;164;164; 0.5;0.5; 0;0;0;0
+playerTuckFull0022;328;184;164;164; 0.5;0.5; 0;0;0;0
+playerTuckFull0023;328;184;164;164; 0.5;0.5; 0;0;0;0
+playerTuckFull0024;328;184;164;164; 0.5;0.5; 0;0;0;0
+playerTuckFull0025;0;20;164;164; 0.5;0.5; 0;0;0;0
+playerTuckFull0026;0;20;164;164; 0.5;0.5; 0;0;0;0
+playerTuckFull0027;0;20;164;164; 0.5;0.5; 0;0;0;0
+playerTuckFull0028;0;20;164;164; 0.5;0.5; 0;0;0;0
+playerTuckFull0029;164;20;164;164; 0.5;0.5; 0;0;0;0
+playerTuckFull0030;164;20;164;164; 0.5;0.5; 0;0;0;0
+playerTuckFull0031;164;20;164;164; 0.5;0.5; 0;0;0;0
+playerTuckFull0032;164;20;164;164; 0.5;0.5; 0;0;0;0

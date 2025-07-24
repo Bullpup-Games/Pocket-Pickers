@@ -1,0 +1,16 @@
+#
+# Sprite sheet data for Unity.
+#
+# To import these sprites into your Unity project, download "TexturePackerImporter":
+# https://www.codeandweb.com/texturepacker/unity
+#
+# $TexturePacker:SmartUpdate:46f66ef6aaebfe9578ae6f01b6cc048a:c928705cc9150dee0c84e7ffb3de3460:f04fc0d82fa8c6f92289ffb4e1adfe48$
+#
+:format=40300
+:texture=screacherIdle_1.png
+:size=512x512
+:pivotpoints=enabled
+:borders=disabled
+:alphahandling=ClearTransparentPixels
+
+screacherIdle.png;1;232;357;279; 0.5;0.5; 0;0;0;0; 21;141;250;168;272;246;250;253;271;274;279;323;279;357;245;357;196;313;164;306;120;324;52;255;0;85;0;54;62;54;130;48;152;0;200;0;245;27;275;53;279;85;279; 19;15;19;20;17;18;19;17;19;16;15;16;19;0;15;20;13;11;12;13;14;11;14;9;11;14;0;9;11;9;10;6;7;8;5;6;8;2;5;8;2;8;9;2;4;5;2;3;4;0;2;9;0;1;2;0;14;15

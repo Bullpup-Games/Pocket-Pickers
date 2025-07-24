@@ -1,0 +1,16 @@
+#
+# Sprite sheet data for Unity.
+#
+# To import these sprites into your Unity project, download "TexturePackerImporter":
+# https://www.codeandweb.com/texturepacker/unity
+#
+# $TexturePacker:SmartUpdate:e71f3b678f806e0b4b48a88a7c689b1a:bdeb3a7358f49cf899d01fb67b32aa67:43424cb69e01fea04665548fb8bb4279$
+#
+:format=40300
+:texture=playerWallSlide_1.png
+:size=128x256
+:pivotpoints=enabled
+:borders=disabled
+:alphahandling=ClearTransparentPixels
+
+playerWallSlideFull;0;113;106;143; 0.5;0.5; 0;0;0;0
