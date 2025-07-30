@@ -371,10 +371,13 @@ namespace _Scripts.Enemies.Guard.State
 
         private void AttackPlayer()
         {
+            var enemyX = _enemy.transform.position.x;
+            var playerX = PlayerVariables.Instance.transform.position.x;
+            bool applyForceToRight = enemyX <= playerX ? true : false;
             // If the player is already in the QTE with this guard it shouldn't start again
-            // _enemy.TransitionToState(_enemy.AttackingState);
-            _enemy.TransitionToState(_enemy.StunnedState);
-            PlayerStateManager.Instance.HandleHitByPatroller(!_enemy.Settings.IsFacingRight());
+                // _enemy.TransitionToState(_enemy.AttackingState);
+                _enemy.TransitionToState(_enemy.StunnedState);
+            PlayerStateManager.Instance.HandleHitByPatroller(applyForceToRight);
         }
 
         private IEnumerator TimeoutSkreecherAlert()
