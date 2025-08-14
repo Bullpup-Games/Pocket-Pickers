@@ -13,7 +13,8 @@ GameObject:
   - component: {fileID: 3804572407909152771}
   - component: {fileID: 7587293620810763234}
   - component: {fileID: 282848193306553840}
-  m_Layer: 0
+  - component: {fileID: 3348822221869699685}
+  m_Layer: 10
   m_Name: chain6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -102,7 +103,7 @@ CapsuleCollider2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 1024
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
@@ -144,10 +145,10 @@ Rigidbody2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
+    m_Bits: 1024
+  m_Interpolate: 1
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!233 &282848193306553840
 HingeJoint2D:
@@ -172,8 +173,22 @@ HingeJoint2D:
     m_MaximumMotorForce: 10000
   m_UseLimits: 0
   m_AngleLimits:
-    m_LowerAngle: 0
-    m_UpperAngle: 359
+    m_LowerAngle: -20
+    m_UpperAngle: 20
+--- !u!114 &3348822221869699685
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 371064900192293633}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f7097eb81c68448fbf70da94bc1314d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  joint: {fileID: 282848193306553840}
+  jointToLower: {fileID: 8834699230083480715}
 --- !u!1 &1839600743500295699
 GameObject:
   m_ObjectHideFlags: 0
@@ -187,7 +202,8 @@ GameObject:
   - component: {fileID: 5414248582192470921}
   - component: {fileID: 3662227507631408780}
   - component: {fileID: 2218508240689597438}
-  m_Layer: 0
+  - component: {fileID: 3024570488838793540}
+  m_Layer: 10
   m_Name: chain5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -276,7 +292,7 @@ CapsuleCollider2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 1024
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
@@ -318,10 +334,10 @@ Rigidbody2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
+    m_Bits: 1024
+  m_Interpolate: 1
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!233 &2218508240689597438
 HingeJoint2D:
@@ -346,8 +362,22 @@ HingeJoint2D:
     m_MaximumMotorForce: 10000
   m_UseLimits: 0
   m_AngleLimits:
-    m_LowerAngle: 0
-    m_UpperAngle: 359
+    m_LowerAngle: -20
+    m_UpperAngle: 20
+--- !u!114 &3024570488838793540
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1839600743500295699}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f7097eb81c68448fbf70da94bc1314d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  joint: {fileID: 2218508240689597438}
+  jointToLower: {fileID: 282848193306553840}
 --- !u!1 &2463706110777965382
 GameObject:
   m_ObjectHideFlags: 0
@@ -361,7 +391,8 @@ GameObject:
   - component: {fileID: 2078006833257725180}
   - component: {fileID: 8308727594576073924}
   - component: {fileID: 7083646019623724271}
-  m_Layer: 0
+  - component: {fileID: 889282891986905793}
+  m_Layer: 10
   m_Name: chain1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -450,7 +481,7 @@ CapsuleCollider2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 1024
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
@@ -492,10 +523,10 @@ Rigidbody2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
+    m_Bits: 1024
+  m_Interpolate: 1
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!233 &7083646019623724271
 HingeJoint2D:
@@ -520,8 +551,22 @@ HingeJoint2D:
     m_MaximumMotorForce: 10000
   m_UseLimits: 0
   m_AngleLimits:
-    m_LowerAngle: 0
-    m_UpperAngle: 359
+    m_LowerAngle: -20
+    m_UpperAngle: 20
+--- !u!114 &889282891986905793
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2463706110777965382}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f7097eb81c68448fbf70da94bc1314d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  joint: {fileID: 7083646019623724271}
+  jointToLower: {fileID: 4415616661878026382}
 --- !u!1 &3295541260746222423
 GameObject:
   m_ObjectHideFlags: 0
@@ -535,7 +580,8 @@ GameObject:
   - component: {fileID: 236122925081805935}
   - component: {fileID: 1190627941784070351}
   - component: {fileID: 4415616661878026382}
-  m_Layer: 0
+  - component: {fileID: 4405961761423603322}
+  m_Layer: 10
   m_Name: chain2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -624,7 +670,7 @@ CapsuleCollider2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 1024
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
@@ -666,10 +712,10 @@ Rigidbody2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
+    m_Bits: 1024
+  m_Interpolate: 1
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!233 &4415616661878026382
 HingeJoint2D:
@@ -694,8 +740,22 @@ HingeJoint2D:
     m_MaximumMotorForce: 10000
   m_UseLimits: 0
   m_AngleLimits:
-    m_LowerAngle: 0
-    m_UpperAngle: 359
+    m_LowerAngle: -20
+    m_UpperAngle: 20
+--- !u!114 &4405961761423603322
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3295541260746222423}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f7097eb81c68448fbf70da94bc1314d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  joint: {fileID: 4415616661878026382}
+  jointToLower: {fileID: 1395060226021976375}
 --- !u!1 &4367804118319676984
 GameObject:
   m_ObjectHideFlags: 0
@@ -709,7 +769,8 @@ GameObject:
   - component: {fileID: 6052840212457512745}
   - component: {fileID: 4786845957161022921}
   - component: {fileID: 1395060226021976375}
-  m_Layer: 0
+  - component: {fileID: 4327938216243063877}
+  m_Layer: 10
   m_Name: chain3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -798,7 +859,7 @@ CapsuleCollider2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 1024
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
@@ -840,10 +901,10 @@ Rigidbody2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
+    m_Bits: 1024
+  m_Interpolate: 1
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!233 &1395060226021976375
 HingeJoint2D:
@@ -868,8 +929,22 @@ HingeJoint2D:
     m_MaximumMotorForce: 10000
   m_UseLimits: 0
   m_AngleLimits:
-    m_LowerAngle: 0
-    m_UpperAngle: 359
+    m_LowerAngle: -20
+    m_UpperAngle: 20
+--- !u!114 &4327938216243063877
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4367804118319676984}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f7097eb81c68448fbf70da94bc1314d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  joint: {fileID: 1395060226021976375}
+  jointToLower: {fileID: 758529357726820046}
 --- !u!1 &6144831795584294631
 GameObject:
   m_ObjectHideFlags: 0
@@ -1181,7 +1256,8 @@ GameObject:
   - component: {fileID: 7018658562676371849}
   - component: {fileID: 3740166522559829487}
   - component: {fileID: 758529357726820046}
-  m_Layer: 0
+  - component: {fileID: 4359782384230858688}
+  m_Layer: 10
   m_Name: chain4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1270,7 +1346,7 @@ CapsuleCollider2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 1024
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
@@ -1312,10 +1388,10 @@ Rigidbody2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
+    m_Bits: 1024
+  m_Interpolate: 1
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!233 &758529357726820046
 HingeJoint2D:
@@ -1340,5 +1416,19 @@ HingeJoint2D:
     m_MaximumMotorForce: 10000
   m_UseLimits: 0
   m_AngleLimits:
-    m_LowerAngle: 0
-    m_UpperAngle: 359
+    m_LowerAngle: -20
+    m_UpperAngle: 20
+--- !u!114 &4359782384230858688
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7842692983917953369}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f7097eb81c68448fbf70da94bc1314d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  joint: {fileID: 758529357726820046}
+  jointToLower: {fileID: 2218508240689597438}
