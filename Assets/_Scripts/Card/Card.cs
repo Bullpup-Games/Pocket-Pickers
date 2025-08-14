@@ -180,7 +180,7 @@ namespace _Scripts.Card
                  * LayerMask.NameToLayer("Layer Name")
                  * takes a layer name and returns its id number
                  */
-                if (hit.collider.gameObject.layer == LayerMask.NameToLayer("Environment"))
+                if (hit.collider.gameObject.layer == LayerMask.NameToLayer("Environment") &! hit.collider.gameObject.CompareTag("permeable"))
                 {
                     CollideWithWall(hit, ref newPosition);
                     return;
