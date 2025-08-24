@@ -511,13 +511,13 @@ namespace _Scripts.Player
         }
         #endregion
 
-        public void ApplyDiagonalForce(bool facingRight)
+        public void ApplyDiagonalForce(bool forceAppliedToRight)
         {
             var verticalPower = PlayerVariables.Instance.Stats.JumpPower * 0.5f;
             var horizontalPower = PlayerVariables.Instance.Stats.MaxSpeed * 3f;
 
             var diagonalForce = new Vector2(
-                facingRight ? horizontalPower : -horizontalPower,
+                forceAppliedToRight ? horizontalPower : -horizontalPower,
                 verticalPower
             );
 

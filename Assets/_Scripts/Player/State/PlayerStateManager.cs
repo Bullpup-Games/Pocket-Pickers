@@ -127,7 +127,7 @@ namespace _Scripts.Player.State
         #endregion
 
         private Coroutine _stunnedByPatroller;
-        public void HandleHitByPatroller(bool struckFromRightSide)
+        public void HandleHitByPatroller(bool forceAppliedToRight)
         {
             if (_stunnedByPatroller != null)
                 return;
@@ -140,7 +140,7 @@ namespace _Scripts.Player.State
             Debug.Log("Player Hit by attack");
             TransitionToState(StunnedState);
             _stunnedByPatroller = StartCoroutine(StunnedByPatrollerHitCountdown());
-            PlayerMovement.Instance.ApplyDiagonalForce(!struckFromRightSide);
+            PlayerMovement.Instance.ApplyDiagonalForce(forceAppliedToRight);
         }
 
         private IEnumerator StunnedByPatrollerHitCountdown()
