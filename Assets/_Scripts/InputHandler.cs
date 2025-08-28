@@ -14,8 +14,17 @@ namespace _Scripts
         public bool JumpPressed { get; private set; }
         public bool JumpHeld { get; private set; }
         
+        // Separate the actual aim direction from what we show for the arrow
+        private Vector2 _actualAimDirection;
+        
+        // Public method to get the actual aim direction for card throwing (only when using mouse)
+        public Vector2 GetActualAimDirection() => _isUsingMouse ? _actualAimDirection : Vector2.zero;
+        
         [SerializeField] private UnityEngine.Camera gameCamera;
         private bool _isUsingMouse = false;
+        private Vector2 _lastMousePosition;
+        private float _lastMouseMoveTime;
+        private const float MOUSE_IDLE_TIMEOUT = 1.5f;
         
         #region Singleton
 
@@ -92,6 +101,9 @@ namespace _Scripts
         {
             if (gameCamera == null)
                 gameCamera = UnityEngine.Camera.main;
+            
+            _lastMousePosition = Input.mousePosition;
+            _lastMouseMoveTime = Time.time;
         }
         
         private void Update()
@@ -104,18 +116,40 @@ namespace _Scripts
             // Handle input based on input type
             Vector2 rawAimInput = _inputActions.Player.Aim.ReadValue<Vector2>();
             
-            // Detect if we're using mouse input (position values > typical joystick range)
             _isUsingMouse = rawAimInput.magnitude > 100f;
             
             if (_isUsingMouse)
             {
-                // Convert mouse screen position to direction relative to player
-                LookInput = GetMouseDirectionToPlayer(rawAimInput);
+                // Always calculate the actual aim direction from mouse position
+                _actualAimDirection = GetMouseDirectionToPlayer(rawAimInput);
+                
+                // Check if mouse has moved to determine arrow visibility
+                Vector2 currentMousePos = rawAimInput;
+                if (Vector2.Distance(currentMousePos, _lastMousePosition) > 1f)
+                {
+                    _lastMousePosition = currentMousePos;
+                    _lastMouseMoveTime = Time.time;
+                }
+                
+                // Only show arrow direction if mouse moved recently
+                bool mouseRecentlyActive = (Time.time - _lastMouseMoveTime) <= MOUSE_IDLE_TIMEOUT;
+                
+                if (mouseRecentlyActive)
+                {
+                    // Show arrow pointing toward mouse
+                    LookInput = _actualAimDirection;
+                }
+                else
+                {
+                    // Hide arrow but keep actual aim direction for card throwing
+                    LookInput = Vector2.zero;
+                }
             }
             else
             {
                 // Use gamepad stick input directly
                 LookInput = rawAimInput;
+                _actualAimDirection = rawAimInput;
             }
 
             // Invoke CardStanceDirectionalInput event if necessary
