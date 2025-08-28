@@ -15,8 +15,9 @@ public class PauseMenu : MonoBehaviour
 
     private void Start()
     {
-        Cursor.visible = false;
-        Cursor.lockState = CursorLockMode.Locked;
+        // Keep cursor visible for mouse input (card throwing)
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
     }
 
     private void OnEnable()
@@ -63,8 +64,9 @@ public class PauseMenu : MonoBehaviour
         if (GameManager.Instance.isDead) return;
         
         pauseMenuUI.SetActive(false);
-        Cursor.visible = false;
-        Cursor.lockState = CursorLockMode.Locked;
+        // Keep cursor visible for mouse input (card throwing)
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
         Time.timeScale = 1f;
         IsPaused = false;
     }
@@ -88,8 +90,9 @@ public class PauseMenu : MonoBehaviour
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
         IsPaused = false;
-        Cursor.visible = false;
-        Cursor.lockState = CursorLockMode.Locked;
+        // Keep cursor visible for mouse input (card throwing)
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
         
         SaveManager.Instance.DeleteSaveFile();
         LevelLoader.Instance.LoadLevel(LevelLoader.Instance.map);

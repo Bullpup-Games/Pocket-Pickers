@@ -14,6 +14,9 @@ namespace _Scripts
         public bool JumpPressed { get; private set; }
         public bool JumpHeld { get; private set; }
         
+        [SerializeField] private UnityEngine.Camera gameCamera;
+        private bool _isUsingMouse = false;
+        
         #region Singleton
 
         public static InputHandler Instance
@@ -85,6 +88,12 @@ namespace _Scripts
             _inputActions.UI.Disable();
         }
         
+        private void Start()
+        {
+            if (gameCamera == null)
+                gameCamera = UnityEngine.Camera.main;
+        }
+        
         private void Update()
         {
             if (GameManager.Instance is null) 
@@ -92,8 +101,22 @@ namespace _Scripts
             if (GameManager.Instance.isDead)
                 return;
             
-            // Read the right stick input directly every frame
-            LookInput = _inputActions.Player.Aim.ReadValue<Vector2>();
+            // Handle input based on input type
+            Vector2 rawAimInput = _inputActions.Player.Aim.ReadValue<Vector2>();
+            
+            // Detect if we're using mouse input (position values > typical joystick range)
+            _isUsingMouse = rawAimInput.magnitude > 100f;
+            
+            if (_isUsingMouse)
+            {
+                // Convert mouse screen position to direction relative to player
+                LookInput = GetMouseDirectionToPlayer(rawAimInput);
+            }
+            else
+            {
+                // Use gamepad stick input directly
+                LookInput = rawAimInput;
+            }
 
             // Invoke CardStanceDirectionalInput event if necessary
             if (!PlayerStateManager.Instance.IsStunnedState() && !CardManager.Instance.IsCardInScene())
@@ -126,6 +149,20 @@ namespace _Scripts
 
         // public Vector2 LookInput() => _lookInput;
 
+        private Vector2 GetMouseDirectionToPlayer(Vector2 mouseScreenPosition)
+        {
+            if (gameCamera == null || PlayerVariables.Instance == null)
+                return Vector2.zero;
+                
+            // Convert player world position to screen position
+            Vector3 playerScreenPos = gameCamera.WorldToScreenPoint(PlayerVariables.Instance.transform.position);
+            
+            // Calculate direction from player to mouse
+            Vector2 direction = (mouseScreenPosition - (Vector2)playerScreenPos).normalized;
+            
+            return direction;
+        }
+        
         private void OnLookPerformed(InputAction.CallbackContext context)
         {
             if (GameManager.Instance is null) 
@@ -138,7 +175,17 @@ namespace _Scripts
             if (CardManager.Instance.IsCardInScene()) 
                 return;
 
-            _lookInput = context.ReadValue<Vector2>();
+            Vector2 rawInput = context.ReadValue<Vector2>();
+            
+            // Check if this is mouse input (large position values)
+            if (rawInput.magnitude > 100f)
+            {
+                _lookInput = GetMouseDirectionToPlayer(rawInput);
+            }
+            else
+            {
+                _lookInput = rawInput;
+            }
 
             if (_lookInput.magnitude > 0.1f)
             {
@@ -159,7 +206,7 @@ namespace _Scripts
         private void OnThrowPerformed(InputAction.CallbackContext context)
         {
             // if (PlayerStateManager.Instance.IsStunnedState()) return;
-            // Debug.Log("Throw Input");
+            Debug.Log($"Throw Input from: {context.control.device}");
             if (GameManager.Instance is null) 
                 return;
             if (!GameManager.Instance.isDead)
