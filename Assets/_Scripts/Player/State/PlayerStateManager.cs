@@ -133,6 +133,7 @@ namespace _Scripts.Player.State
                 return;
 
             PlayerVariables.Instance.currentHealth--;
+            Lives.Instance.updateHearts();
 
             if (PlayerVariables.Instance.currentHealth <= 0)
                 GameManager.Instance.Die();
