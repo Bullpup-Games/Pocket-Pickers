@@ -3,16 +3,29 @@ using UnityEngine;
 
 namespace _Scripts.Camera
 {
+    public enum CameraState
+    {
+        Idle,
+        Transitioning
+    }
+
     public class CameraController : MonoBehaviour
     {
         public float lerpSpeed;
         public AnimationCurve movementCurve;
         private UnityEngine.Camera _cam;
-        
+
         private int _currentRoom;
-        private Vector3 _currentAnchorPoint;
+
+        private CameraState _currentState = CameraState.Idle;
+        private Vector3 _transitionStartPosition;
+        private Vector3 _transitionTargetPosition;
+        private float _transitionProgress;
+        private float _transitionDuration;
+        private Coroutine _activeTransition;
 
         public int GetCurrentRoom() => _currentRoom;
+        public CameraState GetCurrentState() => _currentState;
         
         #region Singleton
 
@@ -36,7 +49,6 @@ namespace _Scripts.Camera
         {
             _cam = GetComponent<UnityEngine.Camera>();
             _currentRoom = 0;
-            _currentAnchorPoint = new Vector3(-34.5f, 0f, -10f);
         }
 
         public void SwitchRooms(Vector3 anchorPoint, int roomNumber)
@@ -44,8 +56,40 @@ namespace _Scripts.Camera
             if (roomNumber == _currentRoom) return;
 
             _currentRoom = roomNumber;
-            _currentAnchorPoint = anchorPoint;
-            StartCoroutine(SmoothSwitch(anchorPoint));
+
+            switch (_currentState)
+            {
+                case CameraState.Idle:
+                    StartTransition(anchorPoint);
+                    break;
+                case CameraState.Transitioning:
+                    UpdateTransitionTarget(anchorPoint);
+                    break;
+            }
+        }
+
+        private void StartTransition(Vector3 targetPosition)
+        {
+            if (_activeTransition != null)
+            {
+                StopCoroutine(_activeTransition);
+            }
+
+            _currentState = CameraState.Transitioning;
+            _transitionStartPosition = _cam.transform.position;
+            _transitionTargetPosition = targetPosition;
+            _transitionProgress = 0f;
+            _transitionDuration = 1f / lerpSpeed;
+
+            _activeTransition = StartCoroutine(SmoothTransition());
+        }
+
+        private void UpdateTransitionTarget(Vector3 newTargetPosition)
+        {
+            _transitionStartPosition = _cam.transform.position;
+            _transitionTargetPosition = newTargetPosition;
+            _transitionProgress = 0f;
+            _transitionDuration = 1f / lerpSpeed;
         }
 
         // Returns the current bounds of the camera
@@ -59,22 +103,26 @@ namespace _Scripts.Camera
             return bounds;
         }
 
-        private IEnumerator SmoothSwitch(Vector3 targetAnchorPoint)
+        private IEnumerator SmoothTransition()
         {
-            var elapsedTime = 0f;
-            var startingPos = _cam.transform.position;
-            var duration = 1f / lerpSpeed;
-
-            while (elapsedTime < duration)
+            while (_currentState == CameraState.Transitioning)
             {
-                var t = elapsedTime / duration;
-                var curveValue = movementCurve.Evaluate(t);
-                _cam.transform.position = Vector3.Lerp(startingPos, targetAnchorPoint, curveValue);
-                elapsedTime += Time.deltaTime;
+                _transitionProgress += Time.deltaTime;
+                var normalizedTime = Mathf.Clamp01(_transitionProgress / _transitionDuration);
+                var curveValue = movementCurve.Evaluate(normalizedTime);
+
+                _cam.transform.position = Vector3.Lerp(_transitionStartPosition, _transitionTargetPosition, curveValue);
+
+                if (normalizedTime >= 1f)
+                {
+                    _cam.transform.position = _transitionTargetPosition;
+                    _currentState = CameraState.Idle;
+                    _activeTransition = null;
+                    yield break;
+                }
+
                 yield return null;
             }
-
-            _cam.transform.position = targetAnchorPoint;
         }
     }
 }
