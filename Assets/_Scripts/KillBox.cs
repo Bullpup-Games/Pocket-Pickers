@@ -6,6 +6,7 @@ using _Scripts.Sound;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.TestTools;
 
 namespace _Scripts
 {
@@ -22,6 +23,12 @@ namespace _Scripts
 
             if (col.gameObject.CompareTag("enemy"))
                 StartCoroutine(WaitBeforeKill(col));
+        }
+
+
+        private void TestWaitBeforeKill()
+        {
+
         }
         
         private IEnumerator WaitBeforeKill(Collider2D col)
