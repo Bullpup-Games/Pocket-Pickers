@@ -1,4 +1,5 @@
 using System;
+using _Scripts.Card;
 using UnityEngine;
 
 public interface IGameStateManager
@@ -33,9 +34,29 @@ public interface IInputService
     event Action OnJumpPressed;
 }
 
-public interface ICardService
+# region Card
+// Single instance that handles the lifecycle of all cards in play
+public interface ICardManager
 {
-    bool IsCardInScene();
-    void ThrowCard(Vector2 direction);
-    event Action<Vector2> OnTeleport;
+    // Type of particle effect played during the card destruction
+    enum CardDestructionTypes
+    {
+        Normal,
+        Teleport,
+        Cancel,
+        FalseTrigger,
+        HitEnemy
+    }
+    // Instantiates a card object belonging to an ICardOwner
+    void CreateCard(ICardOwner owner, Vector2 startPos, Vector2 direction);
+    // Destroys 
+    void DestroyCard(ICardOwner cardOwner, CardDestructionTypes particleEffect);
 }
+
+public interface ICardOwner
+{
+    Transform transform { get; set; }
+    void Teleport(Transform startPos, Vector2 endPos);
+    void ThrowCard(Vector2 direction);
+}
+#endregion
