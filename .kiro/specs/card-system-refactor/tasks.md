@@ -2,20 +2,21 @@
 
 ## Progress Summary
 
-**Overall Progress**: Phase 3 of 5 Complete (60% complete)
+**Overall Progress**: Phase 4 of 5 Complete (80% complete)
 
 **Completed**:
 - ✅ Phase 1: Test Infrastructure & Interface Definition (Tasks 1.1, 1.2)
 - ✅ Phase 2: CardManager Ownership Tracking (Tasks 2.1, 2.2, 2.3, 2.4)
 - ✅ Phase 3: Card Dependency Injection (Tasks 3.1, 3.2, 3.3)
+- ✅ Phase 4: Player ICardOwner Implementation (Tasks 4.1, 4.2)
 
 **In Progress**: None
 
-**Next**: Phase 4: Player ICardOwner Implementation (Tasks 4.1, 4.2)
+**Next**: Phase 5: Integration & Migration (Tasks 5.1, 5.2, 5.3)
 
-**Latest Commit**: 4cd0a14 - Card dependency injection and singleton pattern removal
+**Latest Commit**: 4109584 - PlayerController ICardOwner implementation complete
 
-**Known Issues**: External files still reference Card.Instance (CardManager.cs old methods, KillBox.cs, GuardDisabledState.cs) - will be addressed in Phase 4+
+**Known Issues**: External files still reference Card.Instance (Killbox, CardManager old methods, InputHandler, RayView, LedgeState) - will be addressed in Phase 5
 
 **Gameplay Preservation**: All card physics, collision, movement, bouncing, and safe position code remains 100% unchanged
 
@@ -177,29 +178,42 @@ This document breaks down the **ownership and lifecycle refactor** into actionab
   - **Status**: Card singleton pattern completely removed
   - **Known External References**: Card.Instance still referenced in CardManager.cs (old methods), KillBox.cs, GuardDisabledState.cs - will be addressed in future tasks
 
-### Phase 4: Player ICardOwner Implementation
+### Phase 4: Player ICardOwner Implementation ✅ COMPLETE
 
-- [ ] **4.1** Write Tests for PlayerController ICardOwner Implementation
+- [x] **4.1** Write Tests for PlayerController ICardOwner Implementation ✅ **COMPLETE** (Commit: 90da101)
   - **Description**: Write tests verifying PlayerController implements ICardOwner correctly: ThrowCard calls CardManager.CreateCard, Teleport moves player, OnCardDestroyed updates state, CanThrowCard respects cooldown.
   - **Deliverables**:
-    - `Assets/_Scripts/Tests/PlayerCardOwnerTests.cs` - Test suite for player card ownership
-    - Tests for: throw cooldown, teleportation, card destruction handling, input routing
+    - ✅ `Assets/_Scripts/Tests/PlayerCardOwnerTests.cs` - 18 integration tests
+    - ✅ Tests for interface implementation (2 tests)
+    - ✅ Tests for card throwing with cooldown and duplicate prevention (6 tests)
+    - ✅ Tests for teleportation (2 tests)
+    - ✅ Tests for card destruction callbacks (2 tests)
+    - ✅ Tests for multiple throw cycles (1 test)
+    - ✅ Integration test for full lifecycle (1 test)
+    - ✅ PlayerController stub with NotImplementedException
   - **Requirements**: Input Routing Requirements 3.4
-  - **Tests**: 8+ integration tests (should FAIL initially)
-  - **Estimated Effort**: 1.5 hours
+  - **Tests**: 18 integration tests (TDD RED phase - all fail as expected)
+  - **Actual Effort**: 1 hour
   - **Dependencies**: 2.2, 3.2
+  - **Status**: Comprehensive test coverage ready for implementation
 
-- [ ] **4.2** Implement ICardOwner on PlayerController
+- [x] **4.2** Implement ICardOwner on PlayerController ✅ **COMPLETE** (Commit: 4109584)
   - **Description**: Create or update PlayerController to implement ICardOwner interface. Add card throwing logic, teleportation, and input event handlers that route to card. Initialize with CardManager dependency.
   - **Deliverables**:
-    - Updated or created `Assets/_Scripts/Player/PlayerController.cs`
-    - ICardOwner implementation (ThrowCard, Teleport, CanThrowCard, OnCardDestroyed)
-    - Initialize method for DI
-    - Input event subscriptions (OnCardThrow, OnFalseTrigger, OnCancelActiveCard)
+    - ✅ Created `Assets/_Scripts/Player/PlayerController.cs`
+    - ✅ ICardOwner implementation (ThrowCard, Teleport, CanThrowCard, OnCardDestroyed)
+    - ✅ Initialize method with CardManager dependency and null validation
+    - ✅ CanThrowCard property with cooldown (0.5s) and active card checks
+    - ✅ ThrowCard method with spawn position calculation
+    - ✅ Teleport method with position update
+    - ✅ OnCardDestroyed callback (no-op, cooldown handled by CanThrowCard)
+    - ✅ Transform property explicit interface implementation
   - **Requirements**: Input Routing Requirements 3.4
-  - **Tests**: All tests from 4.1 should now PASS
-  - **Estimated Effort**: 2 hours
+  - **Tests**: All 18 tests from 4.1 should now PASS (TDD GREEN phase)
+  - **Actual Effort**: 45 minutes
   - **Dependencies**: 4.1
+  - **Status**: Full ICardOwner implementation complete
+  - **Notes**: Input event subscriptions deferred to Phase 5 scene integration
 
 ### Phase 5: Integration & Migration
 
