@@ -1,8 +1,7 @@
 using NUnit.Framework;
 using UnityEngine;
-using _Scripts.Tests.Mocks;
 
-namespace _Scripts.Tests
+namespace Tests
 {
     /// <summary>
     /// Verification tests to ensure test infrastructure is set up correctly

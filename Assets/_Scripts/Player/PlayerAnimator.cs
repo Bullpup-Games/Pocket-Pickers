@@ -100,8 +100,8 @@ namespace _Scripts.Player
         public void setListeners()
         {
            // PlayerMovementController.Instance.Jumped += OnJumpDown;
-           CardManager.Instance.cardCreated += doThrowAnimation;
-           CardManager.Instance.Teleport += tuck;
+           Card.CardManager.Instance.cardCreated += doThrowAnimation;
+           Card.CardManager.Instance.Teleport += tuck;
         }
 
         public void deleteListeners()

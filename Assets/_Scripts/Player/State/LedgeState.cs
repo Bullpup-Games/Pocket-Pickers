@@ -13,7 +13,7 @@ namespace _Scripts.Player.State
             
             PlayerMovement.Instance.HaltVerticalMomentum();
 
-            CardManager.Instance.Teleport += teleported;
+            Card.CardManager.Instance.Teleport += teleported;
             
             _slideToLedgePosCoroutine = PlayerStateManager.Instance.StartCoroutine(LerpToLedgeHangPosition());
             

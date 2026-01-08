@@ -63,7 +63,7 @@ namespace _Scripts.Player
 
         private void OnEnable()
         {
-            CardManager.Instance.Teleport += TeleportTo;
+            Card.CardManager.Instance.Teleport += TeleportTo;
             InputHandler.Instance.OnCrouch += ToggleCrouching;
             InputHandler.Instance.OnJumpPressed += HandleJumpPressed;
 

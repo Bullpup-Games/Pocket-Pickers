@@ -4,6 +4,7 @@ using _Scripts.Enemies.Guard.State;
 using _Scripts.Enemies.Skreecher.State;
 using _Scripts.Enemies.Sniper;
 using _Scripts.Enemies.Sniper.State;
+using _Scripts.Managers;
 using _Scripts.Player;
 using _Scripts.Sound;
 using Unity.VisualScripting;
@@ -36,7 +37,7 @@ namespace _Scripts.Card
 
         // === NEW: INJECTED DEPENDENCIES ===
         private ICardOwner _owner; // Replaces PlayerVariables.Instance usage
-        private CardManager _cardManager; // Replaces CardManager.Instance usage
+        private Managers.CardManager _cardManager; // Replaces old CardManager.Instance usage
 
         // === SINGLETON PATTERN REMOVED ===
         // Card.Instance singleton removed in favor of owner-based dependency injection
@@ -52,7 +53,7 @@ namespace _Scripts.Card
         /// <param name="cardManager">The card manager service handling lifecycle</param>
         /// <param name="effects">The effect handler for particle effects</param>
         /// <exception cref="System.ArgumentNullException">Thrown when any parameter is null</exception>
-        public void Initialize(ICardOwner owner, CardManager cardManager, CardEffectHandler effects)
+        public void Initialize(ICardOwner owner, Managers.CardManager cardManager, CardEffectHandler effects)
         {
             if (owner == null)
                 throw new System.ArgumentNullException(nameof(owner), "Card requires ICardOwner");

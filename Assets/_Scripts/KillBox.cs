@@ -49,11 +49,13 @@ namespace _Scripts
             
                 if (col.gameObject.CompareTag("Card"))
                 {
-                    if (Card.Card.Instance is not null && CardManager.Instance.cardPrefab is not null)
+                    // Get the Card component from the collider
+                    var card = col.gameObject.GetComponent<Card.Card>();
+                    if (card != null)
                     {
-                        CardEffectHandler.Instance.DestroyEffect(Card.Card.Instance.transform.position);
+                        // Card.DestroyCard() handles effect, sound, and CardManager notification
                         LavaSoundManager.Instance.PlayLavaSizzleClip();
-                        Card.Card.Instance.DestroyCard();
+                        card.DestroyCard();
                     }
                 } 
             

@@ -1,6 +1,7 @@
 using NUnit.Framework;
 using UnityEngine;
 using _Scripts.Card;
+using _Scripts.Managers;
 
 namespace Tests
 {

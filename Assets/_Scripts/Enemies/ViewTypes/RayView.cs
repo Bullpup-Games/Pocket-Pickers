@@ -288,7 +288,7 @@ namespace _Scripts.Enemies.ViewTypes
         private void LookAtFalseTrigger()
         {
             var position = (Vector2)transform.position;
-            var falseTriggerPosition = CardManager.Instance.lastFalseTriggerPosition;
+            var falseTriggerPosition = Card.CardManager.Instance.lastFalseTriggerPosition;
             var directionToFalseTrigger = (falseTriggerPosition - position).normalized;
             var angleToFalseTrigger = Mathf.Atan2(directionToFalseTrigger.y, directionToFalseTrigger.x) * Mathf.Rad2Deg;
 

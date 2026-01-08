@@ -11,7 +11,7 @@ namespace _Scripts.Enemies.Guard.State
         public void EnterState(GuardStateManager enemy)
         {
             _enemy = enemy;
-            _falseTriggerPos = CardManager.Instance.lastFalseTriggerPosition;
+            _falseTriggerPos = Card.CardManager.Instance.lastFalseTriggerPosition;
 
             if ((_enemy.Settings.IsFacingRight() && _falseTriggerPos.x < _enemy.transform.position.x) ||
                 (!_enemy.Settings.IsFacingRight() && _falseTriggerPos.x > _enemy.transform.position.x))

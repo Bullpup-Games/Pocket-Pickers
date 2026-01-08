@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using _Scripts.Card;
 using UnityEngine;
 
-/// <summary>
-/// Manages the lifecycle of all cards in play, tracking ownership and handling creation/destruction.
-/// Supports multiple card owners (player, enemies) with individual card instances per owner.
-/// </summary>
-public class CardManager : MonoBehaviour, ICardManager
+namespace _Scripts.Managers
+{
+    /// <summary>
+    /// Manages the lifecycle of all cards in play, tracking ownership and handling creation/destruction.
+    /// Supports multiple card owners (player, enemies) with individual card instances per owner.
+    /// </summary>
+    public class CardManager : MonoBehaviour, ICardManager
 {
     // === DEPENDENCIES (injected) ===
     private CardEffectHandler _effectHandler;
@@ -155,4 +157,5 @@ public class CardManager : MonoBehaviour, ICardManager
             _cardToOwner.Remove(card);
         }
     }
+}
 }

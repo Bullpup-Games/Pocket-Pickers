@@ -192,16 +192,19 @@ namespace _Scripts.Card
         //transform location. If it is null, do nothing.
         private void HandleTeleportation()
         {
-            if (Card.Instance != null)
+            if (_instantiatedCard != null)
             {
-                if (Card.Instance.lastSafePosition == Vector2.zero)
+                var card = _instantiatedCard.GetComponent<Card>();
+                if (card == null) return;
+
+                if (card.lastSafePosition == Vector2.zero)
                 {
-                    effectHandler.DestroyEffect(Card.Instance.gameObject.transform.position);
-                    Card.Instance.DestroyCard();
+                    effectHandler.DestroyEffect(card.gameObject.transform.position);
+                    card.DestroyCard();
                     return;
                 }
-                effectHandler.TeleportEffect(Card.Instance.lastSafePosition);
-                Teleport?.Invoke(Card.Instance.lastSafePosition);
+                effectHandler.TeleportEffect(card.lastSafePosition);
+                Teleport?.Invoke(card.lastSafePosition);
                 CardSoundEffectManager.Instance.PlayTeleportClip();
             }
         }
