@@ -1,12 +1,12 @@
 using UnityEngine;
 
-namespace _Scripts.Tests.Mocks
+namespace Tests
 {
     /// <summary>
     /// Mock implementation of CardEffectHandler for testing without actual particle effects
     /// Tracks method calls for test assertions without requiring Unity prefabs
     /// </summary>
-    public class MockCardEffectHandler : MonoBehaviour
+    public class MockCardEffectHandler : CardEffectHandler
     {
         // Tracking properties for test assertions
         public bool TeleportEffectCalled { get; private set; }

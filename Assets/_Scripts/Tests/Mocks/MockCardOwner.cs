@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace _Scripts.Tests.Mocks
+namespace Tests
 {
     /// <summary>
     /// Mock implementation of ICardOwner for testing card ownership and lifecycle logic
