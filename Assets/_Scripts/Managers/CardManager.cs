@@ -69,15 +69,15 @@ public class CardManager : MonoBehaviour, ICardManager
             return;
         }
 
-        // Initialize card with owner and services (when Card.Initialize exists)
-        // card.Initialize(owner, this, _effectHandler);
+        // Initialize card with owner and services
+        card.Initialize(owner, this, _effectHandler);
 
         // Track card
         _activeCards[owner] = card;
         _cardToOwner[card] = owner;
 
-        // Launch card with specified direction (when Card.Launch exists)
-        // card.Launch(direction);
+        // Launch card with specified direction
+        card.Launch(direction);
     }
 
     /// <summary>

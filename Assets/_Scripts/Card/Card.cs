@@ -34,28 +34,52 @@ namespace _Scripts.Card
 
         private const float MinMoveDistance = 0.01f; // Minimum movement distance to prevent sticking
 
-        #region Singleton
+        // === NEW: INJECTED DEPENDENCIES ===
+        private ICardOwner _owner; // Replaces PlayerVariables.Instance usage
+        private CardManager _cardManager; // Replaces CardManager.Instance usage
 
-        public static Card Instance
+        // === SINGLETON PATTERN REMOVED ===
+        // Card.Instance singleton removed in favor of owner-based dependency injection
+        // Cards are now tracked per-owner in CardManager via Dictionary<ICardOwner, Card>
+
+        // === NEW: INITIALIZATION METHOD ===
+
+        /// <summary>
+        /// Initializes the card with its owner and required dependencies.
+        /// Must be called immediately after instantiation before the card starts moving.
+        /// </summary>
+        /// <param name="owner">The entity that owns this card (player or enemy)</param>
+        /// <param name="cardManager">The card manager service handling lifecycle</param>
+        /// <param name="effects">The effect handler for particle effects</param>
+        /// <exception cref="System.ArgumentNullException">Thrown when any parameter is null</exception>
+        public void Initialize(ICardOwner owner, CardManager cardManager, CardEffectHandler effects)
         {
-            get
+            if (owner == null)
+                throw new System.ArgumentNullException(nameof(owner), "Card requires ICardOwner");
+            if (cardManager == null)
+                throw new System.ArgumentNullException(nameof(cardManager), "Card requires CardManager");
+            if (effects == null)
+                throw new System.ArgumentNullException(nameof(effects), "Card requires CardEffectHandler");
+
+            _owner = owner;
+            _cardManager = cardManager;
+            effectHandler = effects;
+
+            // Setup collision ignoring with owner (moved from Awake)
+            var ownerCollider = _owner.transform.GetComponent<Collider2D>();
+            if (ownerCollider != null)
             {
-                if (_instance == null)
-                    _instance = FindObjectOfType(typeof(Card)) as Card;
-
-                return _instance;
+                Physics2D.IgnoreCollision(ownerCollider, GetComponent<Collider2D>());
             }
-            set => _instance = value;
+
+            // Initialize safe position to owner's position (moved from Awake)
+            lastSafePosition = _owner.transform.position;
         }
-
-        private static Card _instance;
-
-        #endregion
 
         private void OnEnable()
         {
             SetListeners();
-            effectHandler = CardEffectHandler.Instance;
+            // effectHandler is set via Initialize() method, not singleton
         }
 
         private void OnDestroy()
@@ -65,30 +89,28 @@ namespace _Scripts.Card
 
         private void SetListeners()
         {
+            // NOTE: Input handling should be routed through owner (ICardOwner)
+            // Keeping legacy InputHandler.Instance for now - will be refactored in Phase 4
             if (InputHandler.Instance != null)
             {
                 InputHandler.Instance.OnFalseTrigger += ActivateFalseTrigger;
                 InputHandler.Instance.OnCancelActiveCard += CancelCardThrow;
             }
 
-            if (CardManager.Instance != null)
-            {
-                CardManager.Instance.Teleport += CatchTeleport;
-            }
+            // CardManager.Teleport event removed - owner handles teleportation directly
         }
 
         private void DeleteListeners()
         {
+            // NOTE: Input handling should be routed through owner (ICardOwner)
+            // Keeping legacy InputHandler.Instance for now - will be refactored in Phase 4
             if (InputHandler.Instance != null)
             {
                 InputHandler.Instance.OnFalseTrigger -= ActivateFalseTrigger;
                 InputHandler.Instance.OnCancelActiveCard -= CancelCardThrow;
             }
 
-            if (CardManager.Instance != null)
-            {
-                CardManager.Instance.Teleport -= CatchTeleport;
-            }
+            // CardManager.Teleport event removed - owner handles teleportation directly
         }
 
         private void Awake()
@@ -97,16 +119,9 @@ namespace _Scripts.Card
             _rb.isKinematic = true;
             bounces = 0;
 
-            // Ignore collisions with the player to avoid pushing on Awake frame
-            var playerCollider = PlayerVariables.Instance.gameObject.GetComponent<Collider2D>();
-            Physics2D.IgnoreCollision(playerCollider, GetComponent<Collider2D>());
-
-            lastSafePosition = PlayerVariables.Instance.transform.position;
+            // NOTE: Collision ignoring and initial setup moved to Initialize()
+            // since _owner is not available until Initialize() is called
             _startTime = Time.time;
-            
-            // Calculate initial velocity
-            _direction = HandleCardStanceArrow.Instance.currentDirection.normalized;
-            CalculateVelocity(_direction);
         }
 
         public void Launch(Vector2 direction)
@@ -123,7 +138,7 @@ namespace _Scripts.Card
         private void Update()
         {
             // Destroy the card after its lifetime expires
-            if (Time.time - _startTime >= CardManager.Instance.cardLifeTime)
+            if (_cardManager != null && Time.time - _startTime >= _cardManager.cardLifeTime)
             {
                 DestroyCard();
             }
@@ -284,11 +299,11 @@ namespace _Scripts.Card
 
         private Collider2D[] boundsCheck(Vector2 offset)
         {
-            var playerCollider = PlayerVariables.Instance.Collider2D;
-            var playerBoundsSize = playerCollider.bounds.size;
+            var ownerCollider = _owner.transform.GetComponent<Collider2D>();
+            var playerBoundsSize = ownerCollider.bounds.size;
             var percent = 0.85f; // Only use 85% of the player's collider size, feels better getting into tight spots and doesn't clip
             var colliderSize = new Vector2(playerBoundsSize.x * percent, playerBoundsSize.y * percent);
-            var colliderOffset = playerCollider.offset;
+            var colliderOffset = ownerCollider.offset;
             
             // get the current collider position with the player offset to cast from when checking for hits
             var colliderPos = (Vector2)transform.position + colliderOffset + offset;
@@ -305,22 +320,22 @@ namespace _Scripts.Card
 
         private void ActivateFalseTrigger()
         {
-            if (CardManager.Instance.falseTriggerOnCooldown)
+            if (_cardManager.falseTriggerOnCooldown)
             {
                 Debug.Log("False Trigger on cooldown.");
                 return;
             }
 
             // Update the last false trigger position
-            CardManager.Instance.lastFalseTriggerPosition = transform.position;
+            _cardManager.lastFalseTriggerPosition = transform.position;
             Debug.Log("False Trigger Activated");
-            
+
             //activate the animation
-            CardEffectHandler.Instance.FalseTriggerEffect(gameObject.transform.position);
+            effectHandler.FalseTriggerEffect(gameObject.transform.position);
             // Play sound effect
             CardSoundEffectManager.Instance.PlayFalseTriggerClip();
-            
-            
+
+
             // Switch states of all enemies within the false trigger radius
             var colliders = Physics2D.OverlapCircleAll(transform.position, falseTriggerRadius, LayerMask.GetMask("Enemy"));
             foreach (var col in colliders)
@@ -330,7 +345,7 @@ namespace _Scripts.Card
                 if (guardStateManager != null)
                 {
                     guardStateManager.TransitionToState(col.GetComponent<GuardStateManager>().InvestigatingState);
-                    CardManager.Instance.ActivateFalseTriggerCooldown();
+                    _cardManager.ActivateFalseTriggerCooldown();
                 }
 
                 // Attempt to cast to SniperStateManager type
@@ -339,17 +354,17 @@ namespace _Scripts.Card
                 {
                     col.GetComponent<SniperStateManager>().investigatingFalseTrigger = true;
                     sniperStateManager.TransitionToState(col.GetComponent<SniperStateManager>().ChargingState);
-                    CardManager.Instance.ActivateFalseTriggerCooldown();
+                    _cardManager.ActivateFalseTriggerCooldown();
                 }
-                
+
                 // Attempt to cast to SkreecherStateManager type
                 var skreecherStateManager = col.GetComponent<IEnemyStateManager<SkreecherStateManager>>();
                 if (skreecherStateManager != null)
                 {
                     skreecherStateManager.TransitionToState(col.GetComponent<SkreecherStateManager>().InvestigatingState);
-                    CardManager.Instance.ActivateFalseTriggerCooldown();
+                    _cardManager.ActivateFalseTriggerCooldown();
                 }
-                
+
             }
             DestroyCard();
             return;
@@ -476,7 +491,7 @@ namespace _Scripts.Card
         {
             if (other.gameObject.CompareTag("EscapeRout"))
             {
-                CardEffectHandler.Instance.DestroyEffect(gameObject.transform.position);
+                effectHandler.DestroyEffect(gameObject.transform.position);
                 DestroyCard();
             }
         }
@@ -489,17 +504,21 @@ namespace _Scripts.Card
         // CALL THIS FUNCTION TO DESTROY CARDS, DON'T START FROM THE CARD MANAGER!
         public void DestroyCard()
         {
-            // Notify the CardManager that the card has been destroyed
-            if (CardManager.Instance != null)
+            // Notify the CardManager to handle destruction via owner-based lifecycle
+            if (_cardManager != null && _owner != null)
             {
-                CardManager.Instance.OnCardDestroyed();
+                _cardManager.DestroyCard(_owner, ICardManager.CardDestructionTypes.Normal);
             }
-            Destroy(gameObject);
+            else
+            {
+                // Fallback for cases where card isn't properly initialized
+                Destroy(gameObject);
+            }
         }
 
         public void CancelCardThrow()
         {
-            CardEffectHandler.Instance.DestroyEffect(gameObject.transform.position);
+            effectHandler.DestroyEffect(gameObject.transform.position);
             CardSoundEffectManager.Instance.PlayCardDestroyClip();
 
             DestroyCard();
