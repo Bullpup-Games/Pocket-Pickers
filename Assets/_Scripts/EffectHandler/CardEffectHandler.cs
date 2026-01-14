@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CardEffectHandler : MonoBehaviour
+public class CardEffectHandler : MonoBehaviour, ICardEffectHandler
 {
 
     public GameObject pinkPoof;

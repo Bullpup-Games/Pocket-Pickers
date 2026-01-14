@@ -35,6 +35,33 @@ public interface IInputService
 }
 
 #region Card
+
+/// <summary>
+/// Handles visual effects for card actions (teleport, bounce, destroy, false trigger)
+/// </summary>
+public interface ICardEffectHandler
+{
+    /// <summary>
+    /// Plays the teleport effect at the specified position
+    /// </summary>
+    void TeleportEffect(Vector2 position);
+
+    /// <summary>
+    /// Plays the false trigger effect at the specified position
+    /// </summary>
+    void FalseTriggerEffect(Vector2 position);
+
+    /// <summary>
+    /// Plays the bounce effect at the specified position
+    /// </summary>
+    void bounceEffect(Vector2 position);
+
+    /// <summary>
+    /// Plays the destroy effect at the specified position
+    /// </summary>
+    void DestroyEffect(Vector2 position);
+}
+
 /// <summary>
 /// Manages the lifecycle of all cards in play, tracking ownership and handling creation/destruction
 /// </summary>
@@ -85,7 +112,7 @@ public interface ICardManager
     /// Initializes the CardManager with required dependencies
     /// </summary>
     /// <param name="effects">The card effect handler for particle effects</param>
-    void Initialize(global::CardEffectHandler effects);
+    void Initialize(ICardEffectHandler effects);
 }
 
 /// <summary>

@@ -24,8 +24,10 @@ namespace Tests
         [SetUp]
         public void Setup()
         {
-            // Create mock card prefab with Card component
+            // Create mock card prefab with Card component and required Collider2D
             _cardPrefab = new GameObject("CardPrefab");
+            _cardPrefab.AddComponent<BoxCollider2D>(); // Required for Physics2D.IgnoreCollision in Card.Initialize
+            _cardPrefab.AddComponent<Rigidbody2D>(); // Required by Card for physics
             _cardPrefab.AddComponent<_Scripts.Card.Card>();
 
             // Create CardManager GameObject
@@ -37,9 +39,8 @@ namespace Tests
                 System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance);
             cardPrefabField?.SetValue(_cardManager, _cardPrefab);
 
-            // Create mock dependencies
-            var effectHandlerObject = new GameObject("EffectHandler");
-            _mockEffectHandler = effectHandlerObject.AddComponent<MockCardEffectHandler>();
+            // Create mock dependencies (plain C# classes, not MonoBehaviours)
+            _mockEffectHandler = new MockCardEffectHandler();
             _mockOwner1 = new MockCardOwner();
             _mockOwner2 = new MockCardOwner();
 
@@ -50,16 +51,14 @@ namespace Tests
         [TearDown]
         public void TearDown()
         {
-            // Cleanup mocks
+            // Cleanup mocks (MockCardOwner creates GameObjects internally)
             _mockOwner1?.Cleanup();
             _mockOwner2?.Cleanup();
 
-            // Destroy all created GameObjects
-            if (_mockEffectHandler != null)
-            {
-                Object.DestroyImmediate(_mockEffectHandler.gameObject);
-            }
+            // MockCardEffectHandler is a plain C# class, no cleanup needed
+            _mockEffectHandler = null;
 
+            // Destroy all created GameObjects
             if (_cardManagerObject != null)
             {
                 Object.DestroyImmediate(_cardManagerObject);
@@ -116,6 +115,9 @@ namespace Tests
             Vector2 startPos = Vector2.zero;
             Vector2 direction = Vector2.right;
 
+            // Expect the error log that will be generated
+            LogAssert.Expect(LogType.Error, "CardManager.CreateCard: owner cannot be null");
+
             // Act
             _cardManager.CreateCard(null, startPos, direction);
 
@@ -132,7 +134,7 @@ namespace Tests
             Vector2 direction = Vector2.right;
 
             // Act - should log error but not crash
-            LogAssert.Expect(LogType.Error, System.Text.RegularExpressions.Regex.Escape("CardManager.CreateCard: owner cannot be null"));
+            LogAssert.Expect(LogType.Error, "CardManager.CreateCard: owner cannot be null");
             _cardManager.CreateCard(null, startPos, direction);
 
             // Assert - test passes if expected log message appears
@@ -160,8 +162,8 @@ namespace Tests
             // Arrange
             _cardManager.CreateCard(_mockOwner1, Vector2.zero, Vector2.right);
 
-            // Act & Assert
-            LogAssert.Expect(LogType.Warning, System.Text.RegularExpressions.Regex.Escape($"Owner {_mockOwner1} already has active card"));
+            // Act & Assert - use regex since MockCardOwner.ToString() includes namespace
+            LogAssert.Expect(LogType.Warning, new System.Text.RegularExpressions.Regex("Owner .* already has active card"));
             _cardManager.CreateCard(_mockOwner1, Vector2.one, Vector2.left);
         }
 

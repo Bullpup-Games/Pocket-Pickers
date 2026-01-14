@@ -3,10 +3,11 @@ using UnityEngine;
 namespace Tests
 {
     /// <summary>
-    /// Mock implementation of CardEffectHandler for testing without actual particle effects
-    /// Tracks method calls for test assertions without requiring Unity prefabs
+    /// Mock implementation of ICardEffectHandler for testing without actual particle effects.
+    /// This is a plain C# class (not a MonoBehaviour) so it can be instantiated in tests.
+    /// Tracks method calls for test assertions without requiring Unity prefabs.
     /// </summary>
-    public class MockCardEffectHandler : CardEffectHandler
+    public class MockCardEffectHandler : ICardEffectHandler
     {
         // Tracking properties for test assertions
         public bool TeleportEffectCalled { get; private set; }
@@ -21,7 +22,7 @@ namespace Tests
         public bool DestroyEffectCalled { get; private set; }
         public Vector2 LastDestroyEffectPosition { get; private set; }
 
-        // Mock effect methods that match CardEffectHandler interface
+        // ICardEffectHandler implementation
         public void TeleportEffect(Vector2 position)
         {
             TeleportEffectCalled = true;

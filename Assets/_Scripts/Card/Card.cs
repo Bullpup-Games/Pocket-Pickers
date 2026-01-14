@@ -23,7 +23,7 @@ namespace _Scripts.Card
         public int totalBounces;  // Total allowed bounces
         public int bounces;       // Current number of bounces
         
-       public CardEffectHandler effectHandler;
+       public ICardEffectHandler effectHandler;
 
         private Vector2 _direction;   // Current movement direction
         private Vector2 _velocity;    // Current velocity
@@ -53,7 +53,7 @@ namespace _Scripts.Card
         /// <param name="cardManager">The card manager service handling lifecycle</param>
         /// <param name="effects">The effect handler for particle effects</param>
         /// <exception cref="System.ArgumentNullException">Thrown when any parameter is null</exception>
-        public void Initialize(ICardOwner owner, Managers.CardManager cardManager, CardEffectHandler effects)
+        public void Initialize(ICardOwner owner, Managers.CardManager cardManager, ICardEffectHandler effects)
         {
             if (owner == null)
                 throw new System.ArgumentNullException(nameof(owner), "Card requires ICardOwner");

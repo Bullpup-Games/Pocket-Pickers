@@ -24,8 +24,10 @@ namespace Tests
         [SetUp]
         public void Setup()
         {
-            // Create mock card prefab with Card component
+            // Create mock card prefab with Card component and required components
             _cardPrefab = new GameObject("CardPrefab");
+            _cardPrefab.AddComponent<BoxCollider2D>(); // Required for Physics2D.IgnoreCollision in Card.Initialize
+            _cardPrefab.AddComponent<Rigidbody2D>(); // Required by Card for physics
             _cardPrefab.AddComponent<_Scripts.Card.Card>();
 
             // Create CardManager
@@ -37,9 +39,8 @@ namespace Tests
                 System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance);
             cardPrefabField?.SetValue(_cardManager, _cardPrefab);
 
-            // Create effect handler
-            var effectHandlerObject = new GameObject("EffectHandler");
-            _mockEffectHandler = effectHandlerObject.AddComponent<MockCardEffectHandler>();
+            // Create effect handler (plain C# class, not MonoBehaviour)
+            _mockEffectHandler = new MockCardEffectHandler();
 
             // Initialize CardManager
             _cardManager.Initialize(_mockEffectHandler);
@@ -54,10 +55,10 @@ namespace Tests
         [TearDown]
         public void TearDown()
         {
-            // Destroy all test objects
-            if (_mockEffectHandler != null)
-                Object.DestroyImmediate(_mockEffectHandler.gameObject);
+            // MockCardEffectHandler is a plain C# class, no cleanup needed
+            _mockEffectHandler = null;
 
+            // Destroy all test GameObjects
             if (_cardManagerObject != null)
                 Object.DestroyImmediate(_cardManagerObject);
 

@@ -32,11 +32,13 @@ namespace Tests
         }
 
         /// <summary>
-        /// Creates a new MockCardOwner with a temporary GameObject and Transform
+        /// Creates a new MockCardOwner with a temporary GameObject and Transform.
+        /// Includes a BoxCollider2D required by Card.Initialize() for collision ignoring.
         /// </summary>
         public MockCardOwner()
         {
             _mockGameObject = new GameObject("MockCardOwner");
+            _mockGameObject.AddComponent<BoxCollider2D>(); // Required for Card.Initialize() collision setup
             _transform = _mockGameObject.transform;
             _transform.position = Vector2.zero;
         }

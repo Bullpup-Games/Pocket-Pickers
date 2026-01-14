@@ -12,7 +12,7 @@ namespace _Scripts.Managers
     public class CardManager : MonoBehaviour, ICardManager
 {
     // === DEPENDENCIES (injected) ===
-    private global::CardEffectHandler _effectHandler;
+    private ICardEffectHandler _effectHandler;
 
     // === CARD TRACKING (multi-instance support) ===
     private Dictionary<ICardOwner, Card.Card> _activeCards = new Dictionary<ICardOwner, Card.Card>();
@@ -40,7 +40,7 @@ namespace _Scripts.Managers
     /// </summary>
     /// <param name="effects">The card effect handler for particle effects</param>
     /// <exception cref="ArgumentNullException">Thrown when effects is null</exception>
-    public void Initialize(CardEffectHandler effects)
+    public void Initialize(ICardEffectHandler effects)
     {
         if (effects == null)
             throw new ArgumentNullException(nameof(effects), "CardManager requires CardEffectHandler");
@@ -117,10 +117,21 @@ namespace _Scripts.Managers
         // Notify owner of card destruction
         cardOwner.OnCardDestroyed(particleEffect);
 
-        // Destroy card GameObject
+        // Destroy card GameObject (use DestroyImmediate in Editor for tests)
         if (card != null)
         {
+#if UNITY_EDITOR
+            if (!Application.isPlaying)
+            {
+                DestroyImmediate(card.gameObject);
+            }
+            else
+            {
+                Destroy(card.gameObject);
+            }
+#else
             Destroy(card.gameObject);
+#endif
         }
     }
 

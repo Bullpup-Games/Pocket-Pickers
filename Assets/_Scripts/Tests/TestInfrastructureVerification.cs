@@ -108,21 +108,18 @@ namespace Tests
         [Test]
         public void MockCardEffectHandler_CanBeCreated()
         {
-            // Arrange & Act
-            var mockHandler = new GameObject("MockHandler").AddComponent<MockCardEffectHandler>();
+            // Arrange & Act (plain C# class, not MonoBehaviour)
+            var mockHandler = new MockCardEffectHandler();
 
             // Assert
             Assert.IsNotNull(mockHandler);
-
-            // Cleanup
-            Object.DestroyImmediate(mockHandler.gameObject);
         }
 
         [Test]
         public void MockCardEffectHandler_TeleportEffectTracksCorrectly()
         {
-            // Arrange
-            var mockHandler = new GameObject("MockHandler").AddComponent<MockCardEffectHandler>();
+            // Arrange (plain C# class, not MonoBehaviour)
+            var mockHandler = new MockCardEffectHandler();
             var testPosition = new Vector2(3f, 4f);
 
             // Act
@@ -131,16 +128,13 @@ namespace Tests
             // Assert
             Assert.IsTrue(mockHandler.TeleportEffectCalled);
             Assert.AreEqual(testPosition, mockHandler.LastTeleportEffectPosition);
-
-            // Cleanup
-            Object.DestroyImmediate(mockHandler.gameObject);
         }
 
         [Test]
         public void MockCardEffectHandler_ResetClearsAllTracking()
         {
-            // Arrange
-            var mockHandler = new GameObject("MockHandler").AddComponent<MockCardEffectHandler>();
+            // Arrange (plain C# class, not MonoBehaviour)
+            var mockHandler = new MockCardEffectHandler();
             mockHandler.TeleportEffect(Vector2.one);
             mockHandler.FalseTriggerEffect(Vector2.one);
             mockHandler.bounceEffect(Vector2.one);
@@ -154,9 +148,6 @@ namespace Tests
             Assert.IsFalse(mockHandler.FalseTriggerEffectCalled);
             Assert.IsFalse(mockHandler.BounceEffectCalled);
             Assert.IsFalse(mockHandler.DestroyEffectCalled);
-
-            // Cleanup
-            Object.DestroyImmediate(mockHandler.gameObject);
         }
     }
 }
