@@ -96,7 +96,8 @@ namespace _Scripts
             LookInput = _inputActions.Player.Aim.ReadValue<Vector2>();
 
             // Invoke CardStanceDirectionalInput event if necessary
-            if (!PlayerStateManager.Instance.IsStunnedState() && !Card.CardManager.Instance.IsCardInScene())
+            bool hasCard = PlayerController.Instance != null && PlayerController.Instance.IsCardInScene();
+            if (!PlayerStateManager.Instance.IsStunnedState() && !hasCard)
             {
                 if (LookInput.magnitude > 0.1f)
                 {
@@ -135,7 +136,7 @@ namespace _Scripts
             
             if (PlayerStateManager.Instance.IsStunnedState())
                 return;
-            if (Card.CardManager.Instance.IsCardInScene()) 
+            if (PlayerController.Instance != null && PlayerController.Instance.IsCardInScene())
                 return;
 
             _lookInput = context.ReadValue<Vector2>();

@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using _Scripts.Card;
 using _Scripts.Enemies.Sniper.State;
 using _Scripts.Player;
+using _Scripts.Services;
 using UnityEngine;
 using UnityEngine.Serialization;
 
@@ -288,7 +289,7 @@ namespace _Scripts.Enemies.ViewTypes
         private void LookAtFalseTrigger()
         {
             var position = (Vector2)transform.position;
-            var falseTriggerPosition = Card.CardManager.Instance.lastFalseTriggerPosition;
+            var falseTriggerPosition = FalseTriggerService.LastFalseTriggerPosition;
             var directionToFalseTrigger = (falseTriggerPosition - position).normalized;
             var angleToFalseTrigger = Mathf.Atan2(directionToFalseTrigger.y, directionToFalseTrigger.x) * Mathf.Rad2Deg;
 

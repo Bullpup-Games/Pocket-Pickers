@@ -63,10 +63,26 @@ namespace _Scripts.Player
 
         private void OnEnable()
         {
-            Card.CardManager.Instance.Teleport += TeleportTo;
+            if (PlayerController.Instance != null)
+            {
+                PlayerController.Instance.TeleportEvent += TeleportTo;
+            }
             InputHandler.Instance.OnCrouch += ToggleCrouching;
             InputHandler.Instance.OnJumpPressed += HandleJumpPressed;
 
+        }
+
+        private void OnDisable()
+        {
+            if (PlayerController.Instance != null)
+            {
+                PlayerController.Instance.TeleportEvent -= TeleportTo;
+            }
+            if (InputHandler.Instance != null)
+            {
+                InputHandler.Instance.OnCrouch -= ToggleCrouching;
+                InputHandler.Instance.OnJumpPressed -= HandleJumpPressed;
+            }
         }
 
         private bool _jumpPressedThisFrame;

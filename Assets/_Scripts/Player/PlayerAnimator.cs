@@ -100,13 +100,21 @@ namespace _Scripts.Player
         public void setListeners()
         {
            // PlayerMovementController.Instance.Jumped += OnJumpDown;
-           Card.CardManager.Instance.cardCreated += doThrowAnimation;
-           Card.CardManager.Instance.Teleport += tuck;
+           if (PlayerController.Instance != null)
+           {
+               PlayerController.Instance.CardCreated += doThrowAnimation;
+               PlayerController.Instance.TeleportEvent += tuck;
+           }
         }
 
         public void deleteListeners()
         {
             //PlayerMovementController.Instance.Jumped -= OnJumpDown;
+            if (PlayerController.Instance != null)
+            {
+                PlayerController.Instance.CardCreated -= doThrowAnimation;
+                PlayerController.Instance.TeleportEvent -= tuck;
+            }
         }
         private void Awake()
         {

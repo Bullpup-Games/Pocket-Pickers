@@ -1,6 +1,6 @@
 using System;
 using System.Collections.Generic;
-using _Scripts.Card;
+using _Scripts.Services;
 using UnityEngine;
 
 namespace _Scripts.Managers
@@ -12,15 +12,26 @@ namespace _Scripts.Managers
     public class CardManager : MonoBehaviour, ICardManager
 {
     // === DEPENDENCIES (injected) ===
-    private CardEffectHandler _effectHandler;
+    private global::CardEffectHandler _effectHandler;
 
     // === CARD TRACKING (multi-instance support) ===
-    private Dictionary<ICardOwner, Card> _activeCards = new Dictionary<ICardOwner, Card>();
-    private Dictionary<Card, ICardOwner> _cardToOwner = new Dictionary<Card, ICardOwner>();
+    private Dictionary<ICardOwner, Card.Card> _activeCards = new Dictionary<ICardOwner, Card.Card>();
+    private Dictionary<Card.Card, ICardOwner> _cardToOwner = new Dictionary<Card.Card, ICardOwner>();
 
     // === EXISTING FIELDS (preserved for Card.cs compatibility) ===
     [SerializeField] private GameObject cardPrefab;
     public float cardLifeTime = 5f; // Referenced by Card.cs for lifetime checks
+
+    // === FALSE TRIGGER SYSTEM ===
+    public float falseTriggerCooldown = 10f;
+    public bool falseTriggerOnCooldown;
+
+    // lastFalseTriggerPosition is global state accessed by enemies - provide property bridge to FalseTriggerService
+    public Vector2 lastFalseTriggerPosition
+    {
+        get => FalseTriggerService.LastFalseTriggerPosition;
+        set => FalseTriggerService.LastFalseTriggerPosition = value;
+    }
 
     // === INITIALIZATION ===
 
@@ -62,7 +73,7 @@ namespace _Scripts.Managers
 
         // Instantiate card from prefab
         GameObject cardObject = Instantiate(cardPrefab, startPos, Quaternion.identity);
-        Card card = cardObject.GetComponent<Card>();
+        Card.Card card = cardObject.GetComponent<Card.Card>();
 
         if (card == null)
         {
@@ -94,7 +105,7 @@ namespace _Scripts.Managers
             return; // Silently ignore null owner destruction
         }
 
-        if (!_activeCards.TryGetValue(cardOwner, out Card card))
+        if (!_activeCards.TryGetValue(cardOwner, out Card.Card card))
         {
             return; // No card to destroy
         }
@@ -131,12 +142,12 @@ namespace _Scripts.Managers
     /// </summary>
     /// <param name="owner">The owner whose card to retrieve</param>
     /// <returns>The active card instance, or null if no card is active</returns>
-    public Card GetCard(ICardOwner owner)
+    public Card.Card GetCard(ICardOwner owner)
     {
         if (owner == null)
             return null;
 
-        return _activeCards.TryGetValue(owner, out Card card) ? card : null;
+        return _activeCards.TryGetValue(owner, out Card.Card card) ? card : null;
     }
 
     // === INTERNAL METHODS ===
@@ -151,11 +162,32 @@ namespace _Scripts.Managers
         if (owner == null)
             return;
 
-        if (_activeCards.TryGetValue(owner, out Card card))
+        if (_activeCards.TryGetValue(owner, out Card.Card card))
         {
             _activeCards.Remove(owner);
             _cardToOwner.Remove(card);
         }
+    }
+
+    // === FALSE TRIGGER COOLDOWN ===
+
+    /// <summary>
+    /// Activates the false trigger cooldown.
+    /// Coroutines are tied to the MonoBehaviour they are called from,
+    /// so this function is needed to call the cooldown coroutine from the card
+    /// that gets destroyed immediately after.
+    /// </summary>
+    public void ActivateFalseTriggerCooldown()
+    {
+        if (falseTriggerOnCooldown) return;
+        StartCoroutine(FalseTriggerCooldown());
+    }
+
+    private System.Collections.IEnumerator FalseTriggerCooldown()
+    {
+        falseTriggerOnCooldown = true;
+        yield return new WaitForSeconds(falseTriggerCooldown);
+        falseTriggerOnCooldown = false;
     }
 }
 }

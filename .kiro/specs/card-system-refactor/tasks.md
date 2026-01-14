@@ -2,7 +2,7 @@
 
 ## Progress Summary
 
-**Overall Progress**: Phase 4 of 5 Complete (80% complete)
+**Overall Progress**: Phase 5 In Progress - Code Compiles (85% complete)
 
 **Completed**:
 - ✅ Phase 1: Test Infrastructure & Interface Definition (Tasks 1.1, 1.2)
@@ -10,13 +10,19 @@
 - ✅ Phase 3: Card Dependency Injection (Tasks 3.1, 3.2, 3.3)
 - ✅ Phase 4: Player ICardOwner Implementation (Tasks 4.1, 4.2)
 
-**In Progress**: None
+**In Progress**: Phase 5 - Integration & Migration
+- Code now compiles with all refactor changes
+- Unit tests need debugging (some failing - see Known Issues)
+- External singleton references cleaned up (moved InputActions, added FalseTriggerService)
 
-**Next**: Phase 5: Integration & Migration (Tasks 5.1, 5.2, 5.3)
+**Next**: Fix failing unit tests, then complete scene integration (Tasks 5.1, 5.2, 5.3)
 
-**Latest Commit**: 4109584 - PlayerController ICardOwner implementation complete
+**Latest Milestone**: Code compiles with refactored card system architecture
 
-**Known Issues**: External files still reference Card.Instance (Killbox, CardManager old methods, InputHandler, RayView, LedgeState) - will be addressed in Phase 5
+**Known Issues**:
+- Some unit tests failing (need investigation - likely test setup issues with MockCardOwner colliders)
+- Card.boundsCheck() may throw if owner has no Collider2D
+- MockCardEffectHandler test instantiation issue in Initialize_WithValidEffectHandler_DoesNotThrow
 
 **Gameplay Preservation**: All card physics, collision, movement, bouncing, and safe position code remains 100% unchanged
 
@@ -337,17 +343,17 @@ A task is considered "Done" when:
 
 ---
 
-**Task Status**: Not Started
+**Task Status**: Phase 5 In Progress
 
-**Current Phase**: Phase 1 (Test Infrastructure & Interface Definition)
+**Current Phase**: Phase 5 (Integration & Migration)
 
-**Overall Progress**: 0/12 tasks completed (0%)
+**Overall Progress**: 10/12 tasks completed (83%) - Phases 1-4 complete, Phase 5 in progress
 
-**Last Updated**: 2025-12-28 (Revised for narrow scope)
+**Last Updated**: 2026-01-13 (Code compiles, tests need debugging)
 
 **Assigned Developer**: TBD
 
-**Estimated Completion**: Based on task estimates, approximately 15-18 hours of focused development time. With manual playtesting and careful review, expect 1-1.5 weeks for solo developer.
+**Estimated Remaining**: Fix test failures, complete scene integration (Tasks 5.1, 5.2, 5.3)
 
 ---
 
@@ -378,3 +384,4 @@ A task is considered "Done" when:
 
 **Most Important Task:**
 - **Task 3.2** - This is the critical task. ONLY change singleton references to injected references. Do NOT touch any gameplay logic. Manual playtest immediately after.
+

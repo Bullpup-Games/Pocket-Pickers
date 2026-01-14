@@ -182,9 +182,9 @@ namespace _Scripts.Card
                 LayerMask.GetMask("Environment","Enemy")
             );
 
-            
 
-            if (!hit.collider.IsUnityNull())
+
+            if (hit.collider != null)
             {
                 
                 /*

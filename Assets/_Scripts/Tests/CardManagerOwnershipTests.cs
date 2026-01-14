@@ -1,6 +1,6 @@
 using NUnit.Framework;
 using UnityEngine;
-using _Scripts.Card;
+using UnityEngine.TestTools;
 using _Scripts.Managers;
 
 namespace Tests
@@ -14,7 +14,7 @@ namespace Tests
     [TestFixture]
     public class CardManagerOwnershipTests
     {
-        private CardManager _cardManager;
+        private _Scripts.Managers.CardManager _cardManager;
         private GameObject _cardManagerObject;
         private MockCardOwner _mockOwner1;
         private MockCardOwner _mockOwner2;
@@ -26,14 +26,14 @@ namespace Tests
         {
             // Create mock card prefab with Card component
             _cardPrefab = new GameObject("CardPrefab");
-            _cardPrefab.AddComponent<Card>();
+            _cardPrefab.AddComponent<_Scripts.Card.Card>();
 
             // Create CardManager GameObject
             _cardManagerObject = new GameObject("CardManager");
-            _cardManager = _cardManagerObject.AddComponent<CardManager>();
+            _cardManager = _cardManagerObject.AddComponent<_Scripts.Managers.CardManager>();
 
             // Use reflection to set the cardPrefab field (it's serialized but we can't use inspector in tests)
-            var cardPrefabField = typeof(CardManager).GetField("cardPrefab",
+            var cardPrefabField = typeof(_Scripts.Managers.CardManager).GetField("cardPrefab",
                 System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance);
             cardPrefabField?.SetValue(_cardManager, _cardPrefab);
 
@@ -71,7 +71,7 @@ namespace Tests
             }
 
             // Destroy any remaining card instances created during tests
-            foreach (var card in Object.FindObjectsOfType<Card>())
+            foreach (var card in Object.FindObjectsOfType<_Scripts.Card.Card>())
             {
                 Object.DestroyImmediate(card.gameObject);
             }
@@ -103,7 +103,7 @@ namespace Tests
 
             // Act
             _cardManager.CreateCard(_mockOwner1, startPos, direction);
-            Card card = _cardManager.GetCard(_mockOwner1);
+            _Scripts.Card.Card card = _cardManager.GetCard(_mockOwner1);
 
             // Assert
             Assert.IsNotNull(card, "GetCard should return card instance after creation");
@@ -143,11 +143,11 @@ namespace Tests
         {
             // Arrange
             _cardManager.CreateCard(_mockOwner1, Vector2.zero, Vector2.right);
-            Card firstCard = _cardManager.GetCard(_mockOwner1);
+            _Scripts.Card.Card firstCard = _cardManager.GetCard(_mockOwner1);
 
             // Act - attempt to create second card for same owner
             _cardManager.CreateCard(_mockOwner1, Vector2.one, Vector2.left);
-            Card secondCard = _cardManager.GetCard(_mockOwner1);
+            _Scripts.Card.Card secondCard = _cardManager.GetCard(_mockOwner1);
 
             // Assert
             Assert.AreSame(firstCard, secondCard,
@@ -195,7 +195,7 @@ namespace Tests
             // Arrange - owner with no card
 
             // Act
-            Card card = _cardManager.GetCard(_mockOwner1);
+            _Scripts.Card.Card card = _cardManager.GetCard(_mockOwner1);
 
             // Assert
             Assert.IsNull(card, "GetCard should return null for owner without active card");
@@ -294,12 +294,12 @@ namespace Tests
         {
             // Arrange & Act - first create/destroy cycle
             _cardManager.CreateCard(_mockOwner1, Vector2.zero, Vector2.right);
-            Card firstCard = _cardManager.GetCard(_mockOwner1);
+            _Scripts.Card.Card firstCard = _cardManager.GetCard(_mockOwner1);
             _cardManager.DestroyCard(_mockOwner1, ICardManager.CardDestructionTypes.Normal);
 
             // Act - second create cycle
             _cardManager.CreateCard(_mockOwner1, Vector2.one, Vector2.up);
-            Card secondCard = _cardManager.GetCard(_mockOwner1);
+            _Scripts.Card.Card secondCard = _cardManager.GetCard(_mockOwner1);
 
             // Assert
             Assert.IsNotNull(secondCard, "Should be able to create card again after destruction");
@@ -355,7 +355,7 @@ namespace Tests
         public void Initialize_WithValidEffectHandler_DoesNotThrow()
         {
             // Arrange
-            var newManager = new GameObject("NewManager").AddComponent<CardManager>();
+            var newManager = new GameObject("NewManager").AddComponent<_Scripts.Managers.CardManager>();
             var effectHandler = new MockCardEffectHandler();
 
             // Act & Assert
@@ -372,7 +372,7 @@ namespace Tests
         public void Initialize_WithNullEffectHandler_ThrowsException()
         {
             // Arrange
-            var newManager = new GameObject("NewManager").AddComponent<CardManager>();
+            var newManager = new GameObject("NewManager").AddComponent<_Scripts.Managers.CardManager>();
 
             // Act & Assert
             Assert.Throws<System.ArgumentNullException>(() =>

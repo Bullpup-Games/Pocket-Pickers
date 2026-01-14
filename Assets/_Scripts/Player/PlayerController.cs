@@ -1,4 +1,6 @@
+using System;
 using UnityEngine;
+using _Scripts.Managers;
 
 namespace _Scripts.Player
 {
@@ -8,12 +10,42 @@ namespace _Scripts.Player
     /// </summary>
     public class PlayerController : MonoBehaviour, ICardOwner
     {
+        // === SINGLETON (Player is a singleton entity in the game) ===
+        public static PlayerController Instance { get; private set; }
+
         // === DEPENDENCIES ===
         private CardManager _cardManager;
 
         // === CARD STATE ===
         private float _lastCardThrowTime = -999f; // Initialize to allow immediate first throw
         private const float CardThrowCooldown = 0.5f;
+
+        // === EVENTS ===
+        /// <summary>
+        /// Fired when the player throws a card
+        /// </summary>
+        public event Action CardCreated;
+
+        /// <summary>
+        /// Fired when the player teleports to a card position
+        /// Passes the teleport destination position
+        /// </summary>
+        public event Action<Vector2> TeleportEvent;
+
+        // === UNITY LIFECYCLE ===
+
+        private void Awake()
+        {
+            if (Instance == null)
+            {
+                Instance = this;
+            }
+            else
+            {
+                Debug.LogWarning("Multiple PlayerController instances detected. Destroying duplicate.");
+                Destroy(gameObject);
+            }
+        }
 
         // === ICARD OWNER IMPLEMENTATION ===
 
@@ -48,6 +80,17 @@ namespace _Scripts.Player
         }
 
         /// <summary>
+        /// Checks if the player currently has an active card in the scene.
+        /// </summary>
+        public bool IsCardInScene()
+        {
+            if (_cardManager == null)
+                return false;
+
+            return _cardManager.IsCardActive(this);
+        }
+
+        /// <summary>
         /// Initializes the player controller with required dependencies
         /// </summary>
         /// <param name="cardManager">The card manager service</param>
@@ -77,6 +120,9 @@ namespace _Scripts.Player
 
             // Update cooldown timer
             _lastCardThrowTime = Time.time;
+
+            // Notify subscribers that card was created
+            CardCreated?.Invoke();
         }
 
         /// <summary>
@@ -89,6 +135,9 @@ namespace _Scripts.Player
         {
             // Teleport player to safe position
             transform.position = safePosition;
+
+            // Notify subscribers about teleportation
+            TeleportEvent?.Invoke(safePosition);
 
             // TODO: Add player-specific teleport effects (camera shake, particles, etc.)
             // These will be added in future when integrating with existing player systems

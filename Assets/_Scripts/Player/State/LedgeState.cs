@@ -10,13 +10,16 @@ namespace _Scripts.Player.State
         public void EnterState()
         {
             PlayerMovement.Instance.HaltHorizontalMomentum();
-            
+
             PlayerMovement.Instance.HaltVerticalMomentum();
 
-            Card.CardManager.Instance.Teleport += teleported;
-            
+            if (PlayerController.Instance != null)
+            {
+                PlayerController.Instance.TeleportEvent += teleported;
+            }
+
             _slideToLedgePosCoroutine = PlayerStateManager.Instance.StartCoroutine(LerpToLedgeHangPosition());
-            
+
             PlayerAnimator.Instance.ledgeHang();
         }
 
@@ -60,9 +63,15 @@ namespace _Scripts.Player.State
         }
         public void ExitState()
         {
+            // Unsubscribe from teleport event
+            if (PlayerController.Instance != null)
+            {
+                PlayerController.Instance.TeleportEvent -= teleported;
+            }
+
             PlayerAnimator.Instance.endHang();
             PlayerStateManager.Instance.setLastLedgeHangTime(Time.time);
-            
+
             if (_slideToLedgePosCoroutine is null) return;
             PlayerStateManager.Instance.StopCoroutine(_slideToLedgePosCoroutine);
             _slideToLedgePosCoroutine = null;

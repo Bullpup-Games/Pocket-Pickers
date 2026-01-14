@@ -1,6 +1,5 @@
 using NUnit.Framework;
 using UnityEngine;
-using _Scripts.Card;
 using _Scripts.Managers;
 using _Scripts.Player;
 
@@ -16,8 +15,8 @@ namespace Tests
     public class PlayerCardOwnerTests
     {
         private GameObject _playerObject;
-        private PlayerController _playerController;
-        private CardManager _cardManager;
+        private _Scripts.Player.PlayerController _playerController;
+        private _Scripts.Managers.CardManager _cardManager;
         private GameObject _cardManagerObject;
         private MockCardEffectHandler _mockEffectHandler;
         private GameObject _cardPrefab;
@@ -27,14 +26,14 @@ namespace Tests
         {
             // Create mock card prefab with Card component
             _cardPrefab = new GameObject("CardPrefab");
-            _cardPrefab.AddComponent<Card>();
+            _cardPrefab.AddComponent<_Scripts.Card.Card>();
 
             // Create CardManager
             _cardManagerObject = new GameObject("CardManager");
-            _cardManager = _cardManagerObject.AddComponent<CardManager>();
+            _cardManager = _cardManagerObject.AddComponent<_Scripts.Managers.CardManager>();
 
             // Set cardPrefab via reflection
-            var cardPrefabField = typeof(CardManager).GetField("cardPrefab",
+            var cardPrefabField = typeof(_Scripts.Managers.CardManager).GetField("cardPrefab",
                 System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance);
             cardPrefabField?.SetValue(_cardManager, _cardPrefab);
 
@@ -48,7 +47,7 @@ namespace Tests
             // Create PlayerController
             _playerObject = new GameObject("Player");
             _playerObject.AddComponent<BoxCollider2D>(); // Required for ICardOwner
-            _playerController = _playerObject.AddComponent<PlayerController>();
+            _playerController = _playerObject.AddComponent<_Scripts.Player.PlayerController>();
             _playerController.Initialize(_cardManager);
         }
 
@@ -69,7 +68,7 @@ namespace Tests
                 Object.DestroyImmediate(_cardPrefab);
 
             // Destroy any remaining cards
-            foreach (var card in Object.FindObjectsOfType<Card>())
+            foreach (var card in Object.FindObjectsOfType<_Scripts.Card.Card>())
                 Object.DestroyImmediate(card.gameObject);
         }
 
@@ -123,7 +122,7 @@ namespace Tests
 
             // Act
             _playerController.ThrowCard(direction);
-            Card card = _cardManager.GetCard(_playerController);
+            _Scripts.Card.Card card = _cardManager.GetCard(_playerController);
 
             // Assert
             Assert.IsNotNull(card, "Card should be created when thrown");
@@ -174,11 +173,11 @@ namespace Tests
         {
             // Arrange
             _playerController.ThrowCard(Vector2.right);
-            Card firstCard = _cardManager.GetCard(_playerController);
+            _Scripts.Card.Card firstCard = _cardManager.GetCard(_playerController);
 
             // Act
             _playerController.ThrowCard(Vector2.left);
-            Card secondCard = _cardManager.GetCard(_playerController);
+            _Scripts.Card.Card secondCard = _cardManager.GetCard(_playerController);
 
             // Assert
             Assert.AreSame(firstCard, secondCard,
@@ -298,7 +297,7 @@ namespace Tests
                 "Card should be active after throwing");
 
             // Act - Simulate teleport
-            Card card = _cardManager.GetCard(_playerController);
+            _Scripts.Card.Card card = _cardManager.GetCard(_playerController);
             Vector2 teleportPosition = new Vector2(5f, 0f);
             _playerController.Teleport(card.transform, teleportPosition);
 

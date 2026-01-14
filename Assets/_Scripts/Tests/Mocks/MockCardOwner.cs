@@ -3,7 +3,8 @@ using UnityEngine;
 namespace Tests
 {
     /// <summary>
-    /// Mock implementation of ICardOwner for testing card ownership and lifecycle logic
+    /// Mock implementation of ICardOwner for testing card ownership and lifecycle logic.
+    /// ICardOwner is in the global namespace (Interfaces.cs), so no using statement is needed.
     /// </summary>
     public class MockCardOwner : ICardOwner
     {

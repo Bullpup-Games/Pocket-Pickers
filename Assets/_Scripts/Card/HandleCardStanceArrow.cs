@@ -14,8 +14,14 @@ namespace _Scripts.Card
         public GameObject directionalArrowPrefab;  // Arrow prefab to instantiate
         private GameObject _directionalArrowInstance;  // The instantiated arrow in the scene
         public GameObject DirectionalArrowInstance() => _directionalArrowInstance;
-    
+
         public Vector2 currentDirection;  // Stores the current direction of the arrow
+
+        [Header("Card Arrow Offset Configuration")]
+        [Tooltip("Horizontal offset from player for arrow display")]
+        public float horizontalOffset = 2.0f;
+        [Tooltip("Vertical offset from player for arrow display")]
+        public float verticalOffset = 0.3f;
 
         #region Singleton
         public static HandleCardStanceArrow Instance
@@ -48,7 +54,7 @@ namespace _Scripts.Card
 
         private void Update()
         {
-            if (CardManager.Instance.IsCardInScene() && _directionalArrowInstance != null)
+            if (PlayerController.Instance != null && PlayerController.Instance.IsCardInScene() && _directionalArrowInstance != null)
                 DestroyDirectionalArrow();
         }
 
@@ -77,7 +83,7 @@ namespace _Scripts.Card
             var angleRad = Mathf.Atan2(currentDirection.y, currentDirection.x);
 
             // Calculate the arrow's position relative to the player
-            var offset = new Vector3(Mathf.Cos(angleRad), Mathf.Sin(angleRad) + CardManager.Instance.verticalOffset, 0) * CardManager.Instance.horizontalOffset;
+            var offset = new Vector3(Mathf.Cos(angleRad), Mathf.Sin(angleRad) + verticalOffset, 0) * horizontalOffset;
             var arrowPosition = PlayerVariables.Instance.transform.position + offset;
             _directionalArrowInstance.transform.position = arrowPosition;
 

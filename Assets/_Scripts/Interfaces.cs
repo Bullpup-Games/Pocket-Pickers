@@ -79,13 +79,13 @@ public interface ICardManager
     /// </summary>
     /// <param name="owner">The owner whose card to retrieve</param>
     /// <returns>The active card instance, or null if no card is active</returns>
-    Card GetCard(ICardOwner owner);
+    _Scripts.Card.Card GetCard(ICardOwner owner);
 
     /// <summary>
     /// Initializes the CardManager with required dependencies
     /// </summary>
     /// <param name="effects">The card effect handler for particle effects</param>
-    void Initialize(CardEffectHandler effects);
+    void Initialize(global::CardEffectHandler effects);
 }
 
 /// <summary>

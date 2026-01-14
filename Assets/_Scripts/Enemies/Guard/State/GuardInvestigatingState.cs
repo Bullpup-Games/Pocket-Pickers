@@ -1,4 +1,5 @@
 using _Scripts.Card;
+using _Scripts.Services;
 using UnityEngine;
 
 namespace _Scripts.Enemies.Guard.State
@@ -11,7 +12,7 @@ namespace _Scripts.Enemies.Guard.State
         public void EnterState(GuardStateManager enemy)
         {
             _enemy = enemy;
-            _falseTriggerPos = Card.CardManager.Instance.lastFalseTriggerPosition;
+            _falseTriggerPos = FalseTriggerService.LastFalseTriggerPosition;
 
             if ((_enemy.Settings.IsFacingRight() && _falseTriggerPos.x < _enemy.transform.position.x) ||
                 (!_enemy.Settings.IsFacingRight() && _falseTriggerPos.x > _enemy.transform.position.x))
