@@ -20,6 +20,8 @@
 
 **Exception**: User may explicitly request scene analysis or modification - only proceed with clear permission.
 
+Always read contents of ./.kiro/ and ./.claude/ for full project context
+
 ---
 
 ## Project-Specific Architecture Patterns
